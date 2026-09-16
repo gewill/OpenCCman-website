@@ -4,7 +4,7 @@
 
 - Pages 项目：`openccman-website`
 - 免费地址：https://openccman-website.pages.dev/
-- 计划域名：`openccman.gewill.org`，由维护者配置；尚未绑定。
+- 正式域名：https://openccman.gewill.org/，已绑定并通过 HTTPS 验证。
 - 语言路径：`/zh-Hans/`、`/zh-Hant/`、`/en/`
 - 隐私政策：各语言下的 `privacy.html`
 - 支持页面：各语言下的 `support.html`
@@ -25,7 +25,7 @@ Cloudflare 静态资源请求免费且不限量；不启用 Functions、数据�
 
 Cloudflare → Workers & Pages → **openccman-website（Pages）** → Custom domains → Set up a custom domain → `openccman.gewill.org`。遵循向导配置 DNS 和 HTTPS，不仅手工添加 CNAME。
 
-绑定成功后，验证三语主页、隐私及支持页，再将页面 canonical/alternate 中的 `https://openccman-website.pages.dev` 更新为正式域名并重新部署。博客旧隐私地址保留；App Store Connect 和应用内链接需要单独更新，不随部署自动修改。
+已验证三语主页、隐私及支持页；页面 canonical/alternate 已使用正式域名。博客旧隐私地址保留；App Store Connect 和应用内链接需要单独更新，不随部署自动修改。
 
 ## 验证范围
 
