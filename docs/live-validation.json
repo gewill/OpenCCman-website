@@ -1,0 +1,42 @@
+{
+  "deployment": "https://ec519080.openccman-website.pages.dev",
+  "source": "86c7fdb",
+  "checks": [
+    {
+      "url": "https://openccman-website.pages.dev/en/",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/en/privacy.html",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/en/support.html",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/zh-Hans/",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/zh-Hans/privacy.html",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/zh-Hans/support.html",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/zh-Hant/",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/zh-Hant/privacy.html",
+      "result": "PASS"
+    },
+    {
+      "url": "https://openccman-website.pages.dev/zh-Hant/support.html",
+      "result": "PASS"
+    }
+  ]
+}
