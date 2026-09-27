@@ -27,13 +27,15 @@ Cloudflare → Workers & Pages → **openccman-website（Pages）** → Custom d
 
 已验证三语主页、隐私及支持页；页面 canonical/alternate 已使用正式域名。博客旧隐私地址保留；App Store Connect 和应用内链接需要单独更新，不随部署自动修改。
 
-## 2.0 预告视频
+## 2.0 产品视频与上线文案
 
-三语首页的功能介绍之后有一个“即将推出／即將推出／Coming soon”区块，播放对应语言的 25 秒产品视频：`site/assets/motion/openccman-2-<lang>.mp4`（1080p30 H.264 + AAC，每个约 3 MB）和同名 `.jpg` 封面。视频不自动播放；访客点击后才加载，Cloudflare Pages 单文件上限 25 MiB，`scripts/check.py` 会检查。
+三语首页的功能介绍之后有 25 秒产品视频：`site/assets/motion/openccman-2-<lang>.mp4`（1080p30 H.264 + AAC，每个约 3 MB）和同名 `.jpg` 封面。视频不自动播放；访客点击后才加载，Cloudflare Pages 单文件上限 25 MiB，`scripts/check.py` 会检查。
 
 视频由私有仓库 [gewill/OpenCCman-motion](https://github.com/gewill/OpenCCman-motion) 的 `mux.sh` 生成，界面文字取自 App 的本地化字符串，转换示例用 OpenCC 1.4.2 实际转换过。
 
-iOS 与 macOS 的 2.0 都公开上架后，删除三语的“即将推出”标记和“App Store 当前版本尚未包含这些功能”一句，再同步更新 `PRODUCT.md`。
+三语公开版首页突出 Mac 全局快捷键、原文与结果布局、单文件 TXT 工作流，并移除“即将推出”声明。**公开版不可提前部署**：先确认 iOS 和 macOS 2.0 都在目标 App Store 地区可下载，且 2.0 Pro 价格已按发布计划核对，再合并发布 PR 并运行 `./deploy.sh`。部署后逐一读回三语首页、视频、下载入口、隐私及支持链接。发布前正式站点继续保留预告文案。
+
+本轮桌面 1440×900 与手机 390×844 的简体中文前后截图在 `docs/screenshots/release-2.0/`；对应来源均为本仓库 `main` 的同一页面，本地使用 Python 静态服务器及 Playwright 录制。截图证明网页布局和文案，不证明 App Store 上架或云端部署。
 
 ## 验证范围
 
