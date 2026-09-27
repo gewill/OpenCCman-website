@@ -27,6 +27,14 @@ Cloudflare → Workers & Pages → **openccman-website（Pages）** → Custom d
 
 已验证三语主页、隐私及支持页；页面 canonical/alternate 已使用正式域名。博客旧隐私地址保留；App Store Connect 和应用内链接需要单独更新，不随部署自动修改。
 
+## 2.0 预告视频
+
+三语首页的功能介绍之后有一个“即将推出／即將推出／Coming soon”区块，播放对应语言的 25 秒产品视频：`site/assets/motion/openccman-2-<lang>.mp4`（1080p30 H.264 + AAC，每个约 3 MB）和同名 `.jpg` 封面。视频不自动播放；访客点击后才加载，Cloudflare Pages 单文件上限 25 MiB，`scripts/check.py` 会检查。
+
+视频由私有仓库 [gewill/OpenCCman-motion](https://github.com/gewill/OpenCCman-motion) 的 `mux.sh` 生成，界面文字取自 App 的本地化字符串，转换示例用 OpenCC 1.4.2 实际转换过。
+
+iOS 与 macOS 的 2.0 都公开上架后，删除三语的“即将推出”标记和“App Store 当前版本尚未包含这些功能”一句，再同步更新 `PRODUCT.md`。
+
 ## 验证范围
 
 2026-09-16：本地链接、三语隐私文字与元数据检查；390px/1440px 响应式及深色截图。首页不声称 2.0 已发布，不显示待调整价格。隐私文案来自维护者批准的三语政策。
