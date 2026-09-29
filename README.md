@@ -1,6 +1,6 @@
 # OpenCCman Website
 
-独立的 OpenCCman 产品、隐私与支持网站。简体中文、繁体中文、英文；纯静态 HTML/CSS，无服务端、分析 SDK 或第三方字体。
+独立的 OpenCCman 产品、隐私与支持网站。简体中文、繁体中文、英文；静态 HTML/CSS 加少量同源脚本，无服务端、分析 SDK、第三方字体或第三方脚本。视觉系统是「稿纸与校样」，规则见 `DESIGN.md`。
 
 - Pages 项目：`openccman-website`
 - 免费地址：https://openccman-website.pages.dev/
@@ -14,12 +14,17 @@
 ## 本地与部署
 
 ```sh
+python3 scripts/build_site.py
 python3 scripts/check.py
 python3 -m http.server 8769 --directory site
 ./deploy.sh
 ```
 
-指南的三语正文在 `scripts/guide_content.py`，页面和 `sitemap.xml` 由 `python3 scripts/build_guides.py` 生成。编辑指南后先生成，再运行 `scripts/check.py`；检查会拒绝未同步的生成页及失效站内链接。结构参考 [iPerfman Guides](https://iperfman.com/en/guides/) 的目录、独立问题页和步骤式说明，文案与功能边界按 OpenCCman 已发布版单独核实。
+所有页面、`sitemap.xml` 和 `site/assets/specimens.js` 都由 `python3 scripts/build_site.py` 生成：指南的三语正文在 `scripts/guide_content.py`，首页、更新记录、支持、隐私、404 和语言选择页的三语文案在 `scripts/site_content.py`。改完文案先生成，再运行 `scripts/check.py`；检查会拒绝未同步的生成页、失效站内链接、内联样式或脚本（CSP 只允许同源资源）以及缺字的字体子集。指南结构参考 [iPerfman Guides](https://iperfman.com/en/guides/) 的目录、独立问题页和步骤式说明，文案与功能边界按 OpenCCman 已发布版单独核实。
+
+首页校样台和预设指南对照表里的转换示例来自 `scripts/specimens.json`，由 `python3 scripts/specimens.py` 调用 OpenCC 1.4.2（App 内置版本）生成，并逐句核对整句输出。App 的四个预设对应 OpenCC 的 `t2s`、`s2t`、`s2twp`、`s2hk`。装有 OpenCC 1.4.2 时 `check.py` 会重算比对，否则打印 SKIP。
+
+`site/assets/fonts/` 里是 Noto Serif SC/TC 与霞鹜文楷按用字做的子集，已改名为 OpenCCman Serif SC/TC、OpenCCman Hand，许可见同目录 `OFL.txt`。标题、结果行或手写批注出现新字时，`check.py` 会提示；用装有 fonttools 和 brotli 的 Python 运行 `python3 scripts/fonts.py --serif-sc NotoSerifSC[wght].ttf --serif-tc NotoSerifTC[wght].ttf --hand LXGWWenKai-Regular.ttf` 重做子集，源字体下载地址写在脚本开头。
 
 只上传 `site/`，不会上传 Git、文档或脚本。部署脚本固定 Wrangler 4.80.0，部署不自动提交或推送。4.132.0 的 `pages project create` 实测改走 Workers，故这里使用经过验证的 Pages CLI 版本。
 
@@ -46,5 +51,7 @@ Cloudflare → Workers & Pages → **openccman-website（Pages）** → Custom d
 2026-09-16：本地链接、三语隐私文字与元数据检查；390px/1440px 响应式及深色截图。隐私文案来自维护者批准的三语政策。
 
 2026-09-29：三语更新记录部署并从正式域名读回；2.0 标为已发布，2.1 保留候选状态。此项验证不代表 2.1 已获 App Review 批准或公开上架。
+
+2026-09-29：稿纸与校样改版。本地用带 `_headers` 同款 CSP 的静态服务器验证三语页面无拦截、交互可用；桌面 1440、手机 390 与深色截图附在对应 PR 中，不存入仓库。
 
 截图见 `docs/screenshots/`；文字转换图为标注的示例，不是应用运行截图。设计检测器因缺少解析器仅完成降级检查，不能当作完整无障碍审计。
