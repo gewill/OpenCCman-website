@@ -16,4 +16,7 @@ for lang in ['en','zh-Hans','zh-Hant']:
  text=Path(f'site/{lang}/index.html').read_text()
  assert f'/assets/motion/openccman-2-{lang}.mp4' in text and 'autoplay' not in text,lang
  assert Path(f'site/assets/motion/openccman-2-{lang}.mp4').stat().st_size<25*1024*1024,lang
-print('PASS: all HTML local links, metadata, three privacy policies and preview videos')
+ changelog=Path(f'site/{lang}/changelog.html').read_text()
+ assert '2.0' in changelog and '2.1' in changelog and 'https://github.com/gewill/OpenCCman/blob/' in changelog,lang
+ assert f'/{lang}/changelog.html' in text,lang
+print('PASS: all HTML local links, metadata, three privacy policies, changelogs and preview videos')
