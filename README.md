@@ -26,7 +26,7 @@ Cloudflare 静态资源请求免费且不限量；不启用 Functions、数据�
 
 Cloudflare → Workers & Pages → **openccman-website（Pages）** → Custom domains → Set up a custom domain → `openccman.gewill.org`。遵循向导配置 DNS 和 HTTPS，不仅手工添加 CNAME。
 
-已验证三语主页、隐私及支持页；页面 canonical/alternate 已使用正式域名。博客旧隐私地址保留；App Store Connect 和应用内链接需要单独更新，不随部署自动修改。
+已验证三语主页、更新记录、隐私及支持页；页面 canonical/alternate 已使用正式域名。博客旧隐私地址保留；App Store Connect 和应用内链接需要单独更新，不随部署自动修改。
 
 ## 2.0 产品视频与上线文案
 
@@ -34,12 +34,14 @@ Cloudflare → Workers & Pages → **openccman-website（Pages）** → Custom d
 
 视频由私有仓库 [gewill/OpenCCman-motion](https://github.com/gewill/OpenCCman-motion) 的 `mux.sh` 生成，界面文字取自 App 的本地化字符串，转换示例用 OpenCC 1.4.2 实际转换过。
 
-三语公开版首页突出 Mac 全局快捷键、原文与结果布局、单文件 TXT 工作流，并移除“即将推出”声明。**公开版不可提前部署**：先确认 iOS 和 macOS 2.0 都在目标 App Store 地区可下载，且 2.0 Pro 价格已按发布计划核对，再合并发布 PR 并运行 `./deploy.sh`。部署后逐一读回三语首页、视频、下载入口、隐私及支持链接。发布前正式站点继续保留预告文案。
+三语公开版首页突出 Mac 全局快捷键、原文与结果布局、单文件 TXT 工作流。2.0 已公开发布，正式站点已部署并读回三语首页、视频、下载入口、隐私及支持链接。更新记录列出公开版 2.0；尚未公开的 2.1 明确标为候选，待上架后再更新其状态。
 
 本轮桌面 1440×900 与手机 390×844 的简体中文前后截图在 `docs/screenshots/release-2.0/`；对应来源均为本仓库 `main` 的同一页面，本地使用 Python 静态服务器及 Playwright 录制。截图证明网页布局和文案，不证明 App Store 上架或云端部署。
 
 ## 验证范围
 
-2026-09-16：本地链接、三语隐私文字与元数据检查；390px/1440px 响应式及深色截图。首页不声称 2.0 已发布，不显示待调整价格。隐私文案来自维护者批准的三语政策。
+2026-09-16：本地链接、三语隐私文字与元数据检查；390px/1440px 响应式及深色截图。隐私文案来自维护者批准的三语政策。
+
+2026-09-29：三语更新记录部署并从正式域名读回；2.0 标为已发布，2.1 保留候选状态。此项验证不代表 2.1 已获 App Review 批准或公开上架。
 
 截图见 `docs/screenshots/`；文字转换图为标注的示例，不是应用运行截图。设计检测器因缺少解析器仅完成降级检查，不能当作完整无障碍审计。
