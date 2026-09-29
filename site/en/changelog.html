@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog — OpenCCman</title><meta name="description" content="OpenCCman release notes and compatibility details for iPhone, iPad and Mac.">
+<meta name="theme-color" content="#f5f7fa"><link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<link rel="canonical" href="https://openccman.gewill.org/en/changelog.html"><link rel="alternate" hreflang="zh-Hans" href="https://openccman.gewill.org/zh-Hans/changelog.html"><link rel="alternate" hreflang="zh-Hant" href="https://openccman.gewill.org/zh-Hant/changelog.html"><link rel="alternate" hreflang="en" href="https://openccman.gewill.org/en/changelog.html">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="/en/"><img src="/assets/icon.png" width="36" height="36" alt="">OpenCCman</a><nav aria-label="Site navigation"><a href="/en/changelog.html" aria-current="page">Changelog</a><a href="/en/support.html">Support</a><a href="/en/privacy.html">Privacy policy</a></nav><nav class="languages" aria-label="Language"><a href="/zh-Hans/changelog.html" lang="zh-Hans" hreflang="zh-Hans">简体</a><a href="/zh-Hant/changelog.html" lang="zh-Hant" hreflang="zh-Hant">繁體</a><a href="/en/changelog.html" lang="en" hreflang="en" aria-current="page">English</a></nav></header>
+<main id="main"><article class="document"><p class="eyebrow">OpenCCman</p><h1>Changelog</h1><p class="intro">Release notes describe changes you can use, along with platform and file-format limits. The full engineering history remains in the app repository.</p>
+<section class="release-entry" aria-labelledby="version-21"><h2 id="version-21">2.1</h2><p class="release-status">Release candidate · not yet available on the App Store</p><p class="release-note">Version 2.1 is being tested. The features below describe the current candidate; availability and final behavior depend on release validation.</p><h3>Added</h3><ul>
+<li>On Mac, Pro can convert and export one UTF-8 TXT file larger than 10 MiB, up to 1 GiB, directly to a file. The current draft and result stay in place. The task shows progress and supports cancellation. Files up to 10 MiB keep the editable import workflow.</li>
+<li>A free Shortcuts action converts text with one of four public presets and returns the result to the next action. Available on iOS/iPadOS 16+ and macOS 13+; input is limited to 10 MiB of UTF-8 and does not use the homepage daily allowance.</li>
+<li>New workspaces start empty, with an optional example. Clearing the source asks for confirmation and removes the current window’s source, result, export snapshot and imported filename.</li>
+<li>A brief iOS launch transition leads into the workspace. Reduce Motion uses a short fade, and VoiceOver skips it.</li>
+</ul><h3>Fixed</h3><ul>
+<li>The Mac global Convert shortcut checks that the focused window, selection and editable target are still the ones that started the request. If the target cannot be confirmed, the result stays in OpenCCman for manual copying.</li>
+</ul></section>
+<section class="release-entry" aria-labelledby="version-20"><h2 id="version-20">2.0</h2><p class="release-date">Published 28 September 2026</p><h3>Added</h3><ul>
+<li>Four presets cover Simplified Chinese, OpenCC Traditional, Taiwan Standard with idioms, and Hong Kong Traditional. Advanced combinations remain available.</li>
+<li>Mac and iPad can place source and result side by side or stacked. Layout preference belongs to each window; narrow windows stack temporarily without changing that preference. iPhone keeps a compact stacked workspace.</li>
+<li>Import or drop one UTF-8 TXT file up to 10 MiB, including a UTF-8 BOM; export the latest successful result as UTF-8 without a BOM. File work runs locally and preserves line endings, blank lines, Emoji, combining characters and embedded U+0000.</li>
+<li>Mac global shortcuts and Services work with selected text in other apps. Automatic replacement needs Accessibility permission and an editable source app; conversion can also open the result in OpenCCman.</li>
+<li>A Customer Center in Settings shows purchase status, restore and support. Mac users on macOS 13+ can optionally enable Launch at Login.</li>
+</ul><h3>Changed</h3><ul>
+<li>The embedded OpenCC core moves from 1.2.0 to 1.4.2. Existing option meanings remain; updated dictionaries may change particular conversion results.</li>
+<li>The homepage still offers 12 free conversions per day. Starting work reserves a use across windows; failures and cancellations release it. Pro conversions remain exempt.</li>
+<li>Minimum systems are iOS 15 and macOS 12. The app is also available on iPad.</li>
+</ul><h3>Fixed</h3><ul>
+<li>Cancellation prevents a late conversion or file import from replacing newer text. An oversized or invalid import leaves the current draft intact.</li>
+<li>Large-text conversion now preserves phrase boundaries and earlier text instead of letting chunk boundaries alter words or drop content.</li>
+<li>The Mac pasteboard workflow preserves saved representations and avoids overwriting a newer copy made by the user.</li>
+</ul></section>
+<section class="release-entry release-history" aria-labelledby="history"><h2 id="history">Earlier source history</h2><p>Earlier source history — 1.0–1.2</p><ul>
+<li>1.2: dependency updates; its earlier chunked large-text conversion was replaced by the 2.0 correction above.</li>
+<li>1.1: macOS Services and configurable global shortcuts for selected text.</li>
+<li>1.0: the original iPhone, iPad and Mac Chinese conversion app with regional options.</li>
+</ul><p><a href="https://github.com/gewill/OpenCCman/blob/main/CHANGELOG.md">Full app changelog</a></p></section>
+</article></main>
+<footer><span>© 2026 OpenCCman</span><a href="/en/changelog.html">Changelog</a><a href="/en/privacy.html">Privacy policy</a><a href="/en/support.html">Support</a><a href="https://github.com/BYVoid/OpenCC">OpenCC</a></footer>
+</body></html>

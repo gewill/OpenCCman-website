@@ -8,6 +8,7 @@
 - 语言路径：`/zh-Hans/`、`/zh-Hant/`、`/en/`
 - 隐私政策：各语言下的 `privacy.html`
 - 支持页面：各语言下的 `support.html`
+- 更新记录：各语言下的 `changelog.html`，按应用仓库 `CHANGELOG.md` 提炼；未发布版本明确标为候选。
 
 ## 本地与部署
 
