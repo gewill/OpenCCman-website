@@ -42,7 +42,7 @@ for lang in ['en','zh-Hans','zh-Hant']:
   assert all(f'hreflang="{other}"' in guide for other in ['en','zh-Hans','zh-Hant']),slug
 sitemap=ElementTree.parse('site/sitemap.xml').getroot()
 urls={entry.text for entry in sitemap.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
-assert len(urls)==27,len(urls)
+assert len(urls)==3*(5+len(ARTICLES)),len(urls)
 for lang in ['en','zh-Hans','zh-Hant']:
  assert f'https://openccman.gewill.org/{lang}/guides/' in urls
  for slug in ARTICLES:

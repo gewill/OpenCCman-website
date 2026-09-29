@@ -95,6 +95,11 @@ def cta(lang: str) -> str:
 def article_page(lang: str, slug: str) -> str:
     copy = LOCALES[lang]
     article = ARTICLES[slug][lang]
+    scope = (
+        f'<p class="guide-scope">{article["scope"]}</p>'
+        if "scope" in article
+        else f'<p class="guide-scope">{copy["scope"]} <a href="/{lang}/changelog.html">{copy["changelog"]}</a></p>'
+    )
     related = "".join(
         f'<li><a href="/{lang}/guides/{other_slug}.html">{other[lang]["card"]}</a></li>'
         for other_slug, other in ARTICLES.items() if other_slug != slug
@@ -105,7 +110,7 @@ def article_page(lang: str, slug: str) -> str:
         f' <span aria-hidden="true">/</span> <a href="/{lang}/guides/">{copy["label"]}</a></nav>'
         f'<div class="guide-heading"><p class="eyebrow">OpenCCman · {copy["label"]}</p>'
         f'<h1>{article["title"]}</h1><p class="intro">{article["lede"]}</p></div>'
-        f'<p class="guide-scope">{copy["scope"]} <a href="/{lang}/changelog.html">{copy["changelog"]}</a></p>'
+        f'{scope}'
         f'<div class="guide-prose">{article["body"]}</div>'
         f'<section class="guide-related"><h2>{copy["related"]}</h2><ul>{related}</ul>'
         f'<p><a href="/{lang}/guides/">← {copy["back"]}</a></p></section>'

@@ -10,7 +10,7 @@ LOCALES = {
         "language": "Language",
         "skip": "Skip to content",
         "hub_title": "OpenCCman guides",
-        "hub_description": "Practical guides to Chinese conversion, regional presets, UTF-8 TXT files and Mac selection shortcuts in OpenCCman.",
+        "hub_description": "Guides to OpenCC, Chinese conversion, regional presets, UTF-8 TXT files and Mac selection shortcuts in OpenCCman.",
         "hub_lede": "Start with a real task. These guides explain what to tap, what changes, and where you may need to review the result.",
         "start": "Start here",
         "read": "Read the guide →",
@@ -20,6 +20,7 @@ LOCALES = {
             "Choose the preset for the audience: OpenCC Traditional, Taiwan or Hong Kong.",
             "Bring in a TXT document only after checking its encoding and size.",
             "On Mac, set up selection shortcuts when you want to work across apps.",
+            "Learn how the upstream OpenCC project powers the app and where its scope differs.",
         ],
         "scope": "These steps describe the publicly available 2.0 app on iPhone, iPad and Mac. Features still being tested for 2.1 are listed separately in the changelog.",
         "related": "More guides",
@@ -37,7 +38,7 @@ LOCALES = {
         "language": "语言",
         "skip": "跳到正文",
         "hub_title": "OpenCCman 使用指南",
-        "hub_description": "学习用 OpenCCman 转换简繁中文、选择台湾与香港预设、处理 UTF-8 TXT 文件及设置 Mac 选中文字快捷键。",
+        "hub_description": "了解 OpenCC 开源项目，并学习用 OpenCCman 转换简繁中文、选择地区预设、处理 TXT 文件及设置 Mac 快捷键。",
         "hub_lede": "从要完成的事情开始：在哪里操作、结果会怎样变化，以及哪些地方需要自己校对。",
         "start": "从这里开始",
         "read": "阅读指南 →",
@@ -47,6 +48,7 @@ LOCALES = {
             "按读者选择 OpenCC 繁体、台湾或香港预设。",
             "处理 TXT 文稿前，先检查编码和文件大小。",
             "需要跨 App 工作时，再设置 Mac 选中文字快捷键。",
+            "了解提供转换能力的 OpenCC 原始项目，以及它和 App 的区别。",
         ],
         "scope": "以下步骤对应已公开的 iPhone、iPad、Mac 2.0 版。仍在验收的 2.1 功能单独列于更新记录。",
         "related": "继续阅读",
@@ -64,7 +66,7 @@ LOCALES = {
         "language": "語言",
         "skip": "跳到正文",
         "hub_title": "OpenCCman 使用指南",
-        "hub_description": "學習用 OpenCCman 轉換簡繁中文、選擇臺灣與香港預設、處理 UTF-8 TXT 檔案，以及設定 Mac 所選文字快捷鍵。",
+        "hub_description": "認識 OpenCC 開源專案，並學習用 OpenCCman 轉換簡繁中文、選擇地區預設、處理 TXT 檔案及設定 Mac 快捷鍵。",
         "hub_lede": "從要完成的事開始：在哪裡操作、結果如何改變，以及哪些地方需要自行校對。",
         "start": "從這裡開始",
         "read": "閱讀指南 →",
@@ -74,6 +76,7 @@ LOCALES = {
             "依讀者選擇 OpenCC 繁體、臺灣或香港預設。",
             "處理 TXT 文件前，先檢查編碼與檔案大小。",
             "需要跨 App 工作時，再設定 Mac 所選文字快捷鍵。",
+            "認識提供轉換能力的 OpenCC 原始專案，以及它與 App 的差別。",
         ],
         "scope": "以下步驟對應已公開的 iPhone、iPad、Mac 2.0 版。仍在驗收的 2.1 功能另列於更新記錄。",
         "related": "繼續閱讀",
@@ -266,6 +269,47 @@ ARTICLES = {
 <section><h2>設定快捷鍵</h2><ol class="guide-steps"><li><strong>開啟「設定 → 全域快速鍵」。</strong>依提示授予輔助使用權限，回到 App 後點選「重新整理」，確認權限狀態。</li><li><strong>啟用並錄入組合鍵。</strong>開啟全域快速鍵開關，分別在「轉換選中文本快速鍵」與「打開選中文本快速鍵」錄入組合鍵；若與其他 App 衝突，可改用其他組合。</li><li><strong>在來源 App 選取文字。</strong>讓文件取得焦點，選取中文後按快捷鍵。「開啟」會把原文帶進 OpenCCman 供你校對；「轉換」會嘗試取代可編輯的選區，也會在 OpenCCman 顯示結果。</li></ol></section>
 <section><h2>未能自動取代怎麼辦</h2><p>自動取代取決於輔助使用權限，以及來源 App 是否支援讀取與編輯選區。若無法安全確認選區或目標，可以在 OpenCCman 查看結果，再手動複製貼上。若快捷鍵完全沒有反應，也要檢查組合鍵是否被其他 App 佔用。</p><p>也可試 macOS 系統服務：選取文字後，在來源 App 的「服務」選單中選擇 OpenCCman 的轉換或開啟操作，前提是該 App 提供相關服務入口。唯讀區域較適合使用「開啟」操作。</p></section>
 <aside class="guide-note">全域快捷鍵與系統服務是 Mac 功能。在 iPhone 或 iPad 上，請使用<a href="convert-chinese.html">App 內轉換流程</a>。</aside>
+""",
+        },
+    },
+    "about-opencc": {
+        "en": {
+            "title": "What is OpenCC? Meet the open-source project behind OpenCCman",
+            "description": "Learn what Open Chinese Convert provides, how dictionary-based conversion differs from translation, and how OpenCCman uses the upstream project.",
+            "card": "Meet the OpenCC project",
+            "summary": "See what the open-source conversion engine does and how it relates to the Apple app.",
+            "lede": "Open Chinese Convert (OpenCC) is the open-source project that supplies the conversion engine and dictionaries used by OpenCCman.",
+            "scope": "This article introduces the upstream project. OpenCCman exposes a selected set of its capabilities; see the other guides for the app's actual controls and limits.",
+            "body": """
+<section><h2>What does OpenCC provide?</h2><p>OpenCC provides conversion dictionaries, a reusable library, command-line tools and dictionary-building tools. Its configurable conversion chains distinguish Simplified and Traditional characters, character variants, and some regional word choices for Mainland China, Taiwan and Hong Kong. The conversion is dictionary-based and deterministic; it can run offline without a generative AI service.</p><p>OpenCC also documents limited Japanese character-form conversion. That upstream capability is separate from the presets described in this site's <a href="choose-preset.html">OpenCCman preset guide</a>.</p></section>
+<section><h2>How does OpenCCman relate to it?</h2><p><a href="https://github.com/BYVoid/OpenCC">OpenCC</a> is the upstream open-source project. <a href="https://github.com/gewill/OpenCCman">OpenCCman</a> is a separate iPhone, iPad and Mac app that integrates the engine through a Swift package. The app adds an Apple-platform interface, presets, TXT import and export, and Mac selection shortcuts. It is not an official OpenCC app and does not expose every upstream configuration or command-line feature.</p><p>If you want to convert text in the app, start with the <a href="convert-chinese.html">first-conversion guide</a>. If you need to develop against OpenCC itself, use the upstream repository and documentation.</p></section>
+<section><h2>What are the limits, and where can I read more?</h2><p>OpenCC changes character forms and dictionary phrases. It does not translate between languages such as Mandarin and Cantonese, and its output is not a substitute for reviewing names, quotations or specialist terms. Which regional forms appear depends on the selected conversion configuration.</p><p>Read the upstream <a href="https://github.com/BYVoid/OpenCC#readme">README</a> for supported tools and configurations, its <a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">design principles</a> for conversion rules, and the <a href="https://github.com/BYVoid/OpenCC/blob/master/LICENSE">Apache 2.0 license</a> for the project's terms. OpenCCman has its own <a href="https://github.com/gewill/OpenCCman">source repository</a>.</p></section>
+""",
+        },
+        "zh-Hans": {
+            "title": "OpenCC 是什么？认识 OpenCCman 使用的开源项目",
+            "description": "介绍 Open Chinese Convert 的词库与转换工具、它和语言翻译的区别，以及 OpenCCman 与原始项目的关系。",
+            "card": "认识 OpenCC 原始项目",
+            "summary": "了解开源转换引擎能做什么，以及它和 Apple 平台 App 的关系。",
+            "lede": "OpenCC（Open Chinese Convert，开放中文转换）是提供 OpenCCman 所用转换引擎与词库的开源项目。",
+            "scope": "本文介绍 OpenCC 原始项目。OpenCCman 只提供其中一部分能力；App 的实际操作和限制请以其他指南为准。",
+            "body": """
+<section><h2>OpenCC 提供什么？</h2><p>OpenCC 提供转换词库、可复用的程序库、命令行工具和词库生成工具。它通过可配置的转换链区分简繁字形、异体字，以及中国大陆、台湾、香港的部分地区用词。转换由词典规则决定，可离线运行，不依赖生成式 AI 服务。</p><p>上游还记录了有限的日文字形转换能力；这不等于 OpenCCman 的<a href="choose-preset.html">预设</a>提供日文转换。</p></section>
+<section><h2>它和 OpenCCman 是什么关系？</h2><p><a href="https://github.com/BYVoid/OpenCC">OpenCC</a> 是原始开源项目；<a href="https://github.com/gewill/OpenCCman">OpenCCman</a> 是通过 Swift 软件包接入引擎的独立 iPhone、iPad 和 Mac 应用。App 增加了 Apple 平台界面、转换预设、TXT 导入导出和 Mac 选中文字快捷键。OpenCCman 不是 OpenCC 官方 App，也没有开放上游的全部配置和命令行能力。</p><p>想在 App 中转换文字，可先看<a href="convert-chinese.html">入门指南</a>；要开发或使用 OpenCC 原始工具，请看上游仓库与文档。</p></section>
+<section><h2>转换的边界与官方资料</h2><p>OpenCC 处理字形和词典中的词组，不负责普通话与粤语等语言之间的翻译。人名、引文和专业术语仍值得人工校对；具体地区写法取决于所选转换配置。</p><p>从上游 <a href="https://github.com/BYVoid/OpenCC#readme">README</a> 查看工具与配置，阅读<a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">设计原则</a>了解转换规则，或查看该项目的 <a href="https://github.com/BYVoid/OpenCC/blob/master/LICENSE">Apache 2.0 许可协议</a>。OpenCCman 的源码在<a href="https://github.com/gewill/OpenCCman">独立仓库</a>。</p></section>
+""",
+        },
+        "zh-Hant": {
+            "title": "OpenCC 是什麼？認識 OpenCCman 使用的開源專案",
+            "description": "介紹 Open Chinese Convert 的詞庫與轉換工具、它與語言翻譯的差別，以及 OpenCCman 和原始專案的關係。",
+            "card": "認識 OpenCC 原始專案",
+            "summary": "了解開源轉換引擎能做什麼，以及它與 Apple 平台 App 的關係。",
+            "lede": "OpenCC（Open Chinese Convert，開放中文轉換）是提供 OpenCCman 所用轉換引擎與詞庫的開源專案。",
+            "scope": "本文介紹 OpenCC 原始專案。OpenCCman 只提供其中一部分能力；App 的實際操作與限制請以其他指南為準。",
+            "body": """
+<section><h2>OpenCC 提供什麼？</h2><p>OpenCC 提供轉換詞庫、可重用的程式庫、命令列工具及詞庫生成工具。它透過可設定的轉換鏈區分簡繁字形、異體字，以及中國大陸、臺灣、香港的部分地區用詞。轉換由詞典規則決定，可離線執行，不依賴生成式 AI 服務。</p><p>上游也記錄了有限的日文字形轉換能力；這不表示 OpenCCman 的<a href="choose-preset.html">預設</a>提供日文轉換。</p></section>
+<section><h2>它與 OpenCCman 是什麼關係？</h2><p><a href="https://github.com/BYVoid/OpenCC">OpenCC</a> 是原始開源專案；<a href="https://github.com/gewill/OpenCCman">OpenCCman</a> 是透過 Swift 套件接入引擎的獨立 iPhone、iPad 和 Mac App。App 加入了 Apple 平台介面、轉換預設、TXT 匯入匯出及 Mac 所選文字快捷鍵。OpenCCman 不是 OpenCC 官方 App，也未提供上游的全部設定與命令列功能。</p><p>想在 App 中轉換文字，可先看<a href="convert-chinese.html">入門指南</a>；若要開發或使用 OpenCC 原始工具，請參考上游儲存庫及文件。</p></section>
+<section><h2>轉換的邊界與官方資料</h2><p>OpenCC 處理字形及詞典中的詞組，不負責國語與粵語等語言之間的翻譯。人名、引文及專業術語仍應人工校對；具體地區寫法取決於所選轉換設定。</p><p>從上游 <a href="https://github.com/BYVoid/OpenCC#readme">README</a> 查看工具與設定，閱讀<a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">設計原則</a>了解轉換規則，或查看該專案的 <a href="https://github.com/BYVoid/OpenCC/blob/master/LICENSE">Apache 2.0 授權條款</a>。OpenCCman 的原始碼在<a href="https://github.com/gewill/OpenCCman">獨立儲存庫</a>。</p></section>
 """,
         },
     },
