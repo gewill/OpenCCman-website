@@ -12,8 +12,9 @@ LANGUAGES = ("zh-Hans", "zh-Hant", "en")
 
 
 def head(lang: str, path: str, title: str, description: str) -> str:
+    canonical_path = path.removesuffix(".html")
     alternates = "".join(
-        f'<link rel="alternate" hreflang="{other}" href="{ORIGIN}/{other}/{path}">'
+        f'<link rel="alternate" hreflang="{other}" href="{ORIGIN}/{other}/{canonical_path}">'
         for other in LANGUAGES
     )
     return (
@@ -24,7 +25,7 @@ def head(lang: str, path: str, title: str, description: str) -> str:
         '<meta name="theme-color" content="#f5f7fa">'
         '<link rel="icon" href="/assets/icon.png">'
         '<link rel="stylesheet" href="/assets/style.css">'
-        f'<link rel="canonical" href="{ORIGIN}/{lang}/{path}">'
+        f'<link rel="canonical" href="{ORIGIN}/{lang}/{canonical_path}">'
         f'{alternates}</head>'
     )
 
@@ -121,8 +122,8 @@ def pages() -> dict[Path, str]:
         for slug in ARTICLES:
             rendered[directory / f"{slug}.html"] = article_page(lang, slug)
     paths = [f"/{lang}/{page}" for lang in LANGUAGES for page in (
-        "", "privacy.html", "support.html", "changelog.html", "guides/",
-        *(f"guides/{slug}.html" for slug in ARTICLES),
+        "", "privacy", "support", "changelog", "guides/",
+        *(f"guides/{slug}" for slug in ARTICLES),
     )]
     rendered[SITE / "sitemap.xml"] = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
