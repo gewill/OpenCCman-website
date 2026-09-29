@@ -62,7 +62,7 @@ LOCALES = {
         "home": "首頁",
         "support": "聯絡支援",
         "privacy": "隱私權政策",
-        "changelog": "更新記錄",
+        "changelog": "更新紀錄",
         "language": "語言",
         "skip": "跳到正文",
         "hub_title": "OpenCCman 使用指南",
@@ -78,7 +78,7 @@ LOCALES = {
             "需要跨 App 工作時，再設定 Mac 所選文字快捷鍵。",
             "認識提供轉換能力的 OpenCC 原始專案，以及它與 App 的差別。",
         ],
-        "scope": "以下步驟對應已公開的 iPhone、iPad、Mac 2.0 版。仍在驗收的 2.1 功能另列於更新記錄。",
+        "scope": "以下步驟對應已公開的 iPhone、iPad、Mac 2.0 版。仍在驗收的 2.1 功能另列於更新紀錄。",
         "related": "繼續閱讀",
         "back": "所有指南",
         "cta_title": "開始轉換",
@@ -158,7 +158,7 @@ ARTICLES = {
 <dt>Hong Kong · Traditional</dt><dd>Applies Hong Kong character variants. The preset does not add a separate Hong Kong idiom option in OpenCCman.</dd>
 </dl></section>
 <section><h2>A practical choice</h2><ol class="guide-steps"><li><strong>Know your audience.</strong> For Taiwan-facing copy start with Taiwan Standard with idioms; for Hong Kong-facing copy start with Hong Kong Traditional.</li><li><strong>Keep an original.</strong> Compare the source and result, especially for names, brands, quotations and technical terms.</li><li><strong>Use advanced controls only when needed.</strong> Other combinations appear as Custom. Change one setting at a time and reconvert so you can see its effect.</li></ol></section>
-<aside class="guide-note">OpenCC's <a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">design principles</a> explain why its `t`, `tw` and `hk` modes are conversion conventions rather than guarantees of a particular style guide.</aside>
+<aside class="guide-note">OpenCC's <a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">design principles</a> explain why its <code>t</code>, <code>tw</code> and <code>hk</code> modes are conversion conventions rather than guarantees of a particular style guide.</aside>
 """,
         },
         "zh-Hans": {
@@ -175,7 +175,7 @@ ARTICLES = {
 <dt>香港繁体</dt><dd>应用香港字形。OpenCCman 的这项预设没有另加独立的香港惯用词选项。</dd>
 </dl></section>
 <section><h2>如何做选择</h2><ol class="guide-steps"><li><strong>先看读者。</strong>面向台湾的文案先试“台湾正体＋台湾词组”；面向香港的文案先试“香港繁体”。</li><li><strong>保留原文对照。</strong>特别检查人名、品牌、引文和专业词汇。</li><li><strong>需要时再用高级选项。</strong>其他组合会显示“自定义”。一次调整一项并重新转换，便于看出差异。</li></ol></section>
-<aside class="guide-note">OpenCC 的<a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">设计原则</a>说明 `t`、`tw`、`hk` 是转换模式，并非符合特定地区编辑规范的保证。</aside>
+<aside class="guide-note">OpenCC 的<a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">设计原则</a>说明 <code>t</code>、<code>tw</code>、<code>hk</code> 是转换模式，并非符合特定地区编辑规范的保证。</aside>
 """,
         },
         "zh-Hant": {
@@ -192,7 +192,7 @@ ARTICLES = {
 <dt>香港繁體</dt><dd>套用香港字形。OpenCCman 的這項預設沒有另加獨立的香港慣用詞選項。</dd>
 </dl></section>
 <section><h2>如何做選擇</h2><ol class="guide-steps"><li><strong>先看讀者。</strong>面向臺灣的文案先試「臺灣正體＋臺灣詞組」；面向香港的文案先試「香港繁體」。</li><li><strong>保留原文對照。</strong>特別檢查人名、品牌、引文與專業詞彙。</li><li><strong>需要時再用進階選項。</strong>其他組合會顯示「自訂」。一次調整一項並重新轉換，便於看出差異。</li></ol></section>
-<aside class="guide-note">OpenCC 的<a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">設計原則</a>說明 `t`、`tw`、`hk` 是轉換模式，並非符合特定地區編輯規範的保證。</aside>
+<aside class="guide-note">OpenCC 的<a href="https://github.com/BYVoid/OpenCC/blob/master/DESIGN_PRINCIPLES.md">設計原則</a>說明 <code>t</code>、<code>tw</code>、<code>hk</code> 是轉換模式，並非符合特定地區編輯規範的保證。</aside>
 """,
         },
     },
