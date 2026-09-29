@@ -46,5 +46,6 @@ assert len(urls)==27,len(urls)
 for lang in ['en','zh-Hans','zh-Hant']:
  assert f'https://openccman.gewill.org/{lang}/guides/' in urls
  for slug in ARTICLES:
-  assert f'https://openccman.gewill.org/{lang}/guides/{slug}.html' in urls
+  assert f'https://openccman.gewill.org/{lang}/guides/{slug}' in urls
+assert all(not url.endswith('.html') for url in urls),urls
 print('PASS: local links, metadata, three-language guides, privacy, changelogs and preview videos')
