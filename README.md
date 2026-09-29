@@ -9,6 +9,7 @@
 - 隐私政策：各语言下的 `privacy.html`
 - 支持页面：各语言下的 `support.html`
 - 更新记录：各语言下的 `changelog.html`，按应用仓库 `CHANGELOG.md` 提炼；未发布版本明确标为候选。
+- 使用指南：各语言下的 `guides/` 目录页与四篇独立文章，介绍入门转换、地区预设、UTF-8 TXT 和 Mac 选中文字快捷键。指南只承诺已公开的 2.0 能力。
 
 ## 本地与部署
 
@@ -17,6 +18,8 @@ python3 scripts/check.py
 python3 -m http.server 8769 --directory site
 ./deploy.sh
 ```
+
+指南的三语正文在 `scripts/guide_content.py`，页面和 `sitemap.xml` 由 `python3 scripts/build_guides.py` 生成。编辑指南后先生成，再运行 `scripts/check.py`；检查会拒绝未同步的生成页及失效站内链接。结构参考 [iPerfman Guides](https://iperfman.com/en/guides/) 的目录、独立问题页和步骤式说明，文案与功能边界按 OpenCCman 已发布版单独核实。
 
 只上传 `site/`，不会上传 Git、文档或脚本。部署脚本固定 Wrangler 4.80.0，部署不自动提交或推送。4.132.0 的 `pages project create` 实测改走 Workers，故这里使用经过验证的 Pages CLI 版本。
 

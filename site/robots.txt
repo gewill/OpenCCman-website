@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://openccman.gewill.org/sitemap.xml
