@@ -4,7 +4,8 @@
 
 - Pages 项目：`openccman-website`
 - 免费地址：https://openccman-website.pages.dev/
-- 正式域名：https://openccman.gewill.org/，已绑定并通过 HTTPS 验证。
+- 正式域名：https://openccman.gewill.org/
+  已绑定并通过 HTTPS 验证。
 - 语言路径：`/zh-Hans/`、`/zh-Hant/`、`/en/`
 - 隐私政策：各语言下的 `privacy.html`
 - 支持页面：各语言下的 `support.html`
