@@ -331,8 +331,8 @@ CHANGELOG = {
             {
                 "id": "version-21",
                 "version": "2.1",
-                "status": "候选版本 · 尚未在 App Store 上架",
-                "note": "2.1 正在验收。以下内容对应当前候选版，最终可用时间和行为以发布验收结果为准。<a href=\"https://github.com/gewill/OpenCCman/blob/release/v2.1/CHANGELOG.md\">查看 2.1 候选版应用 Changelog</a>。",
+                "date": "2026 年 10 月 1 日发布",
+                "note": "适用于 iOS/iPadOS 15 及以上、macOS 12 及以上。iPhone/iPad 文件上限仍为 10 MiB；1 GiB 直接文件转换仅限 Mac Pro，不支持批量转换。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.1\">查看 2.1 发布说明</a>。",
                 "groups": [
                     [
                         "新增",
@@ -340,7 +340,7 @@ CHANGELOG = {
                             "Mac Pro 可将单个大于 10 MiB、最多 1 GiB 的 UTF-8 TXT 文件直接转换并导出到文件，不占用当前编辑区的原文和结果。任务显示进度并可取消；不超过 10 MiB 的文件继续使用可编辑的导入流程。",
                             "新增免费「转换文字」快捷指令动作，可选择四个公开预设，并将结果交给下一个动作。适用于 iOS/iPadOS 16 及以上、macOS 13 及以上；UTF-8 输入上限 10 MiB，不计入主页每日次数。",
                             "新工作区默认留空，可自行填入示例。清空原文前会确认，同时清除当前窗口的原文、结果、导出快照和导入文件名。",
-                            "iOS 启动时加入简短过渡；开启「减少动态效果」时使用短暂淡入，VoiceOver 启用时跳过过渡。"
+                            "更新应用图标与启动标识，支持系统提供的深色、透明和着色图标外观；开启「减少动态效果」时使用短暂淡入，VoiceOver 启用时跳过过渡。"
                         ]
                     ],
                     [
@@ -405,8 +405,8 @@ CHANGELOG = {
             {
                 "id": "version-21",
                 "version": "2.1",
-                "status": "候選版本 · 尚未於 App Store 上架",
-                "note": "2.1 正在驗收。以下內容對應目前候選版，最終推出時間及行為以發布驗收結果為準。<a href=\"https://github.com/gewill/OpenCCman/blob/release/v2.1/CHANGELOG.md\">檢視 2.1 候選版 App Changelog</a>。",
+                "date": "2026 年 10 月 1 日推出",
+                "note": "適用於 iOS/iPadOS 15 以上、macOS 12 以上。iPhone/iPad 檔案上限仍為 10 MiB；1 GiB 直接檔案轉換僅限 Mac Pro，不支援批次轉換。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.1\">檢視 2.1 發布說明</a>。",
                 "groups": [
                     [
                         "新增",
@@ -414,7 +414,7 @@ CHANGELOG = {
                             "Mac Pro 可將單一大於 10 MiB、最多 1 GiB 的 UTF-8 TXT 檔案直接轉換並匯出成檔案，不動目前編輯區的原文與結果。工作會顯示進度，也能取消；不超過 10 MiB 的檔案仍使用可編輯的匯入流程。",
                             "新增免費的「轉換文字」捷徑動作，可選擇四個公開預設，並將結果傳給下一個動作。適用於 iOS/iPadOS 16 以上、macOS 13 以上；UTF-8 輸入上限 10 MiB，不計入首頁每日次數。",
                             "新工作區預設為空，可自行填入範例。清除原文前會確認，同時移除目前視窗的原文、結果、匯出快照及匯入檔名。",
-                            "iOS 啟動時加入短暫轉場；開啟「減少動態效果」時改用短暫淡入，啟用 VoiceOver 時跳過轉場。"
+                            "更新 App 圖示與啟動標誌，支援系統提供的深色、透明及著色圖示外觀；開啟「減少動態效果」時改用短暫淡入，啟用 VoiceOver 時跳過轉場。"
                         ]
                     ],
                     [
@@ -479,8 +479,8 @@ CHANGELOG = {
             {
                 "id": "version-21",
                 "version": "2.1",
-                "status": "Release candidate · not yet available on the App Store",
-                "note": "Version 2.1 is being tested. The features below describe the current candidate; availability and final behavior depend on release validation. <a href=\"https://github.com/gewill/OpenCCman/blob/release/v2.1/CHANGELOG.md\">Candidate app changelog</a>.",
+                "date": "Published 1 October 2026",
+                "note": "Requires iOS/iPadOS 15+ or macOS 12+. iPhone/iPad files remain limited to 10 MiB; direct file conversion up to 1 GiB is Mac Pro only, with no batch conversion. <a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.1\">Read the 2.1 release notes</a>.",
                 "groups": [
                     [
                         "Added",
@@ -488,7 +488,7 @@ CHANGELOG = {
                             "On Mac, Pro can convert and export one UTF-8 TXT file larger than 10 MiB, up to 1 GiB, directly to a file. The current draft and result stay in place. The task shows progress and supports cancellation. Files up to 10 MiB keep the editable import workflow.",
                             "A free Shortcuts action converts text with one of four public presets and returns the result to the next action. Available on iOS/iPadOS 16+ and macOS 13+; input is limited to 10 MiB of UTF-8 and does not use the homepage daily allowance.",
                             "New workspaces start empty, with an optional example. Clearing the source asks for confirmation and removes the current window’s source, result, export snapshot and imported filename.",
-                            "A brief iOS launch transition leads into the workspace. Reduce Motion uses a short fade, and VoiceOver skips it."
+                            "Updated app icon and launch mark, including system-supported dark, clear and tinted icon appearances. Reduce Motion uses a short fade, and VoiceOver skips it."
                         ]
                     ],
                     [
