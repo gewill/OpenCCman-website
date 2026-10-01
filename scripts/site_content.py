@@ -331,7 +331,7 @@ CHANGELOG = {
             {
                 "id": "version-21",
                 "version": "2.1",
-                "status": "2026 年 10 月 1 日 · 已通过审核并提交发布，商店更新中",
+                "date": "2026 年 10 月 1 日发布",
                 "note": "适用于 iOS/iPadOS 15 及以上、macOS 12 及以上。iPhone/iPad 文件上限仍为 10 MiB；1 GiB 直接文件转换仅限 Mac Pro，不支持批量转换。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.1\">查看 2.1 发布说明</a>。",
                 "groups": [
                     [
@@ -405,7 +405,7 @@ CHANGELOG = {
             {
                 "id": "version-21",
                 "version": "2.1",
-                "status": "2026 年 10 月 1 日 · 已通過審核並提交發布，商店更新中",
+                "date": "2026 年 10 月 1 日推出",
                 "note": "適用於 iOS/iPadOS 15 以上、macOS 12 以上。iPhone/iPad 檔案上限仍為 10 MiB；1 GiB 直接檔案轉換僅限 Mac Pro，不支援批次轉換。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.1\">檢視 2.1 發布說明</a>。",
                 "groups": [
                     [
@@ -479,7 +479,7 @@ CHANGELOG = {
             {
                 "id": "version-21",
                 "version": "2.1",
-                "status": "1 October 2026 · Approved and released in App Store Connect; storefront rollout in progress",
+                "date": "Published 1 October 2026",
                 "note": "Requires iOS/iPadOS 15+ or macOS 12+. iPhone/iPad files remain limited to 10 MiB; direct file conversion up to 1 GiB is Mac Pro only, with no batch conversion. <a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.1\">Read the 2.1 release notes</a>.",
                 "groups": [
                     [
