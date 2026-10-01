@@ -763,6 +763,7 @@ main { view-transition-name: sheet; display: block; padding-block-end: calc(var(
   background: transparent;
   cursor: pointer;
 }
+.film-play[hidden] { display: none; }
 .film-play .disc {
   position: relative;
   display: grid;
