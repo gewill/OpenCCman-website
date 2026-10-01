@@ -202,6 +202,7 @@ def colophon(lang):
         f'<nav aria-label="{u["foot"]}">'
         f'<a href="{page_path(lang, "guides")}">{u["guides"]}</a><a href="{page_path(lang, "changelog")}">{u["changelog"]}</a>'
         f'<a href="{page_path(lang, "privacy")}">{u["privacy"]}</a><a href="{page_path(lang, "support")}">{u["support"]}</a>'
+        '<a href="https://github.com/gewill/OpenCCman">GitHub</a>'
         '<a href="https://github.com/BYVoid/OpenCC">OpenCC</a></nav>'
         f'<span class="count" data-count="{u["count"]}" hidden></span>'
         '</div></footer>'
