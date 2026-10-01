@@ -42,7 +42,7 @@ Cloudflare → Workers & Pages → **openccman-website（Pages）** → Custom d
 
 视频由私有仓库 [gewill/OpenCCman-motion](https://github.com/gewill/OpenCCman-motion) 的 `mux.sh` 生成，界面文字取自 App 的本地化字符串，转换示例用 OpenCC 1.4.2 实际转换过。
 
-三语公开版首页突出 Mac 全局快捷键、原文与结果布局、单文件 TXT 工作流。2.0 已公开发布，正式站点已部署并读回三语首页、视频、下载入口、隐私及支持链接。更新记录列出公开版 2.0；尚未公开的 2.1 明确标为候选，待上架后再更新其状态。
+三语公开版首页突出 Mac 全局快捷键、原文与结果布局、单文件 TXT 工作流。2.0 已公开发布，正式站点已部署并读回三语首页、视频、下载入口、隐私及支持链接。更新记录列出公开版 2.0；2.1 更新记录按 2026-10-01 发布内容更新，注明 Mac Pro 1 GiB、移动端 10 MiB 和 Shortcuts 系统要求。
 
 本轮桌面 1440×900 与手机 390×844 的简体中文前后截图在 `docs/screenshots/release-2.0/`；对应来源均为本仓库 `main` 的同一页面，本地使用 Python 静态服务器及 Playwright 录制。截图证明网页布局和文案，不证明 App Store 上架或云端部署。
 
