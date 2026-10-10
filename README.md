@@ -11,6 +11,7 @@
 - 支持页面：各语言下的 `support.html`
 - 更新记录：各语言下的 `changelog.html`，按应用仓库 `CHANGELOG.md` 提炼；未发布版本明确标为候选。
 - 使用指南：各语言下的 `guides/` 目录页与五篇独立文章，介绍入门转换、地区预设、UTF-8 TXT、Mac 选中文字快捷键及 OpenCC 原始项目。应用操作指南只承诺已公开的 2.0 能力；上游介绍另行区分项目能力与 App 功能。
+- 竖排卡片：各语言下的 `vertical-card.html`，输入中文生成竖排图片，入口在首页指南列表下方和页脚，不进页头导航。网页版不做简繁转换。
 
 ## 本地与部署
 
@@ -30,6 +31,18 @@ python3 -m http.server 8769 --directory site
 只上传 `site/`，不会上传 Git、文档或脚本。部署脚本固定 Wrangler 4.80.0，部署不自动提交或推送。4.132.0 的 `pages project create` 实测改走 Workers，故这里使用经过验证的 Pages CLI 版本。
 
 Cloudflare 静态资源请求免费且不限量；不启用 Functions、数据库或其他付费功能。参阅 [官方计费说明](https://developers.cloudflare.com/pages/functions/pricing/)。
+
+## 竖排卡片工具
+
+工具页由 `build_site.py` 生成三语表单，`site/assets/vertical.js` 在 canvas 上逐字排版：每字一格，从右到左，处理避头尾、句读悬挂、大陆或台湾的标点位置、纵中横和横排英文。预览和导出的 PNG 出自同一套绘制代码。CSS `writing-mode` 方案在原型阶段比较过并放弃，实测和理由见 [#17](https://github.com/gewill/OpenCCman-website/issues/17)。
+
+访客输入的字无法预知，所以卡片字体不走 `fonts.py` 的按用字子集，而是由 `scripts/vertical_fonts.py` 把思源宋体简、繁和霞鹜文楷切成按 `unicode-range` 按需加载的 WOFF2 切片，放在 `site/assets/vertical/`，每套字体一个 CSS。切片分组沿用 Google Fonts 按字频的分组（记录在 `scripts/vertical_slices.json`），覆盖 GB 2312、Big5 和常用标点；更生僻的字在画布上退回系统字体。重做切片：
+
+```sh
+python3 scripts/vertical_fonts.py --serif-sc 'NotoSerifSC[wght].ttf' --serif-tc 'NotoSerifTC[wght].ttf' --hand LXGWWenKai-Regular.ttf
+```
+
+导出的图片用 `blob:` 地址显示，所以 `_headers` 的 CSP 是 `img-src 'self' blob:`；`blob:` 只能由本站页面自己生成，不引入外部来源。
 
 ## 配置域名
 
