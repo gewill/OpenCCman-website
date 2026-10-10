@@ -1172,3 +1172,110 @@ main { view-transition-name: sheet; display: block; padding-block-end: calc(var(
   .missing-title { font-size: 34px; }
   .lang-cells a { inline-size: calc(var(--m) * 10 / 3); }
 }
+
+/* Vertical card tool (#17) ------------------------------------------------- */
+
+.vc {
+  display: grid;
+  grid-template-columns: calc(var(--m) * 11) minmax(0, calc(var(--m) * 11));
+  grid-template-areas: "slip form" "out form";
+  grid-template-rows: auto 1fr;
+  column-gap: calc(var(--m) * 2);
+  row-gap: 18px;
+  align-items: start;
+}
+.vc-slip {
+  grid-area: slip;
+  padding: calc(var(--m) * 0.5);
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgb(var(--shadow) / 0.05), 0 22px 44px -26px rgb(var(--shadow) / 0.35);
+}
+.vc-frame { position: relative; inline-size: 100%; aspect-ratio: 3 / 4; background: var(--paper); }
+.vc-frame canvas { display: block; inline-size: 100%; block-size: 100%; }
+.vc-status {
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-end: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.vc-warn { margin-block-start: 10px; color: var(--red); font-size: 14px; line-height: 1.6; }
+.vc-warn:empty { margin: 0; }
+
+.vc-out { grid-area: out; display: grid; gap: 22px; }
+button.stamp { border: 0; cursor: pointer; }
+button.stamp:disabled { opacity: 0.5; cursor: default; box-shadow: none; }
+.vc-result { display: grid; gap: 10px; }
+.vc [hidden] { display: none; }
+.vc-result img { inline-size: 100%; border: 1px solid var(--rule); border-radius: 2px; -webkit-touch-callout: default; }
+.vc-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.vc-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: 600 16px/1.6 var(--f-text);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 0.3em;
+  cursor: pointer;
+}
+.vc-link:hover { text-decoration-thickness: 2px; text-decoration-color: var(--ink); }
+
+.vc-form { grid-area: form; display: grid; gap: 22px; }
+.vc-field { display: grid; gap: 8px; min-inline-size: 0; margin: 0; padding: 0; border: 0; }
+.vc-label { padding: 0; color: var(--graphite); font-size: 14px; font-weight: 400; line-height: 1.6; }
+.vc-label output { margin-inline-start: 6px; color: var(--ink); font-weight: 600; }
+.vc-form textarea,
+.vc-form input[type="text"] {
+  inline-size: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--sheet);
+  color: var(--ink);
+  font: 400 17px/1.8 var(--f-text);
+}
+.vc-form textarea { min-block-size: 9.5em; resize: vertical; }
+.vc-form textarea:focus-visible,
+.vc-form input[type="text"]:focus-visible { outline: 2px solid var(--rule-strong); outline-offset: 0; border-color: var(--rule-strong); }
+.vc-pair { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 16px; }
+.vc-samples { display: flex; flex-wrap: wrap; gap: 8px; }
+.vc-sample {
+  min-block-size: 32px;
+  padding: 2px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--graphite);
+  font-size: 14px;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: background-color 0.18s var(--ease-out), color 0.18s;
+}
+.vc-sample:hover { background: var(--wash); color: var(--ink); }
+.vc-form .presets span { min-inline-size: 4.5em; text-align: center; }
+.vc-check { display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 1.6; cursor: pointer; }
+.vc-check input { flex: none; inline-size: 18px; block-size: 18px; margin: 0; accent-color: var(--rule-strong); }
+.vc-form input[type="range"] { inline-size: 100%; margin: 0; accent-color: var(--rule-strong); }
+.vc-form input[type="range"]:disabled { opacity: 0.45; }
+.vc-notes { max-inline-size: calc(var(--m) * 14); margin-block-start: calc(var(--m) * 1.25); }
+
+@media (max-width: 1023px) {
+  .vc { grid-template-columns: minmax(0, 1fr); grid-template-areas: "slip" "form" "out"; grid-template-rows: auto; row-gap: calc(var(--m) * 0.75); }
+  .vc-slip { inline-size: min(100%, 460px); justify-self: center; }
+  .vc-notes { max-inline-size: none; }
+}
+
+@media (max-width: 767px) {
+  .vc-slip { padding: 10px; }
+  .vc-pair { grid-template-columns: minmax(0, 1fr); }
+  .vc-out .stamp { inline-size: 100%; justify-content: center; }
+  .vc-form .presets.n3 { grid-template-columns: repeat(3, 1fr); }
+}

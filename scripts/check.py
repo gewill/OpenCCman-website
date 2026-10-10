@@ -57,10 +57,24 @@ for lang in ['en','zh-Hans','zh-Hant']:
   assert all(f'hreflang="{other}"' in guide for other in ['en','zh-Hans','zh-Hant']),slug
 sitemap=ElementTree.parse('site/sitemap.xml').getroot()
 urls={entry.text for entry in sitemap.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
-assert len(urls)==3*(5+len(ARTICLES)),len(urls)
+assert len(urls)==3*(6+len(ARTICLES)),len(urls)
 for lang in ['en','zh-Hans','zh-Hant']:
  assert f'https://openccman.gewill.org/{lang}/guides/' in urls
  for slug in ARTICLES:
   assert f'https://openccman.gewill.org/{lang}/guides/{slug}' in urls
 assert all(not url.endswith('.html') for url in urls),urls
-print('PASS: generated pages, CSP-safe markup, local links, font coverage, three-language guides, privacy, changelogs and preview videos')
+# Vertical card tool (#17): page, script and the unicode-range font slices it links.
+manifest=json.loads(Path('scripts/vertical_fonts.json').read_text())
+for lang in ['en','zh-Hans','zh-Hant']:
+ text=Path(f'site/{lang}/vertical-card.html').read_text()
+ assert 'data-vertical' in text and '/assets/vertical.js' in text,lang
+ assert f'https://openccman.gewill.org/{lang}/vertical-card' in urls,lang
+ assert f'/{lang}/vertical-card.html' in Path(f'site/{lang}/index.html').read_text(),lang
+for key,face in manifest.items():
+ css=Path(f'site/assets/vertical/{key}.css').read_text()
+ files=re.findall(r'url\("([^"]+)"\)',css)
+ assert len(files)==face['slices']==len(list(Path(f'site/assets/vertical/{key}').glob('*.woff2'))),key
+ assert all(Path(f'site/assets/vertical/{name}').exists() for name in files),key
+ assert css.count(f'font-family:"{face["family"]}"')==face['slices'],key
+ assert all(name in Path('site/assets/vertical.js').read_text() for name in (key,face['family'])),key
+print('PASS: generated pages, CSP-safe markup, local links, font coverage, three-language guides, privacy, changelogs, preview videos and the vertical card tool')

@@ -15,7 +15,7 @@ from html import escape
 from pathlib import Path
 
 from guide_content import ARTICLES, LOCALES
-from site_content import CHANGELOG, HOME, LANG_CELLS, NOT_FOUND, PRIVACY, PROOF, ROOT, SUPPORT, UI
+from site_content import CHANGELOG, HOME, LANG_CELLS, NOT_FOUND, PRIVACY, PROOF, ROOT, SUPPORT, UI, VERTICAL
 
 SCRIPTS = Path(__file__).resolve().parent
 SITE = SCRIPTS.parent / "site"
@@ -202,6 +202,7 @@ def colophon(lang):
         f'<nav aria-label="{u["foot"]}">'
         f'<a href="{page_path(lang, "guides")}">{u["guides"]}</a><a href="{page_path(lang, "changelog")}">{u["changelog"]}</a>'
         f'<a href="{page_path(lang, "privacy")}">{u["privacy"]}</a><a href="{page_path(lang, "support")}">{u["support"]}</a>'
+        f'<a href="{page_path(lang, "vertical-card")}">{u["vertical"]}</a>'
         '<a href="https://github.com/gewill/OpenCCman">GitHub</a>'
         '<a href="https://github.com/BYVoid/OpenCC">OpenCC</a></nav>'
         f'<span class="count" data-count="{u["count"]}" hidden></span>'
@@ -209,7 +210,7 @@ def colophon(lang):
     )
 
 
-def head(lang, title, description, key=None, fonts=(), specimens=False):
+def head(lang, title, description, key=None, fonts=(), specimens=False, scripts=()):
     links = ""
     if key:
         links = f'<link rel="canonical" href="{canonical(lang, key)}">' + "".join(
@@ -217,7 +218,7 @@ def head(lang, title, description, key=None, fonts=(), specimens=False):
     preload = "".join(
         f'<link rel="preload" href="/assets/fonts/{name}.woff2" as="font" type="font/woff2" crossorigin>' for name in fonts)
     scripts = ('<script src="/assets/specimens.js" defer></script>' if specimens else "") + \
-        '<script src="/assets/site.js" defer></script>'
+        '<script src="/assets/site.js" defer></script>' + "".join(f'<script src="{src}" defer></script>' for src in scripts)
     return (
         f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -234,10 +235,10 @@ def serif(lang):
     return ("serif-tc", "serif-sc") if lang == "zh-Hant" else ("serif-sc",)
 
 
-def document(lang, key, title, description, body, fonts=None, specimens=False, body_class=""):
+def document(lang, key, title, description, body, fonts=None, specimens=False, body_class="", scripts=()):
     fonts = fonts if fonts is not None else serif(lang)
     classes = f' class="{body_class}"' if body_class else ""
-    return (head(lang, title, description, key, fonts, specimens)
+    return (head(lang, title, description, key, fonts, specimens, scripts)
             + f'<body{classes}>{masthead(lang, key)}<main id="main">{body}</main>{colophon(lang)}</body></html>\n')
 
 
@@ -437,7 +438,8 @@ def home(lang):
         f'{guides_title}'
         f'<p class="body-copy">{h["guides_body"]}</p>'
         f'<div class="toc-block">{toc(lang)}</div>'
-        f'<p class="more"><a class="slip-link" href="{page_path(lang, "guides")}"><span>{h["guides_link"]}</span>{LINK_ARROW}</a></p>'
+        f'<p class="more"><a class="slip-link" href="{page_path(lang, "guides")}"><span>{h["guides_link"]}</span>{LINK_ARROW}</a>'
+        f'<a class="slip-link" href="{page_path(lang, "vertical-card")}"><span>{VERTICAL[lang]["home_link"]}</span>{LINK_ARROW}</a></p>'
         '</section>'
         '<section class="wrap closing" aria-labelledby="closing-title">'
         f'{closing_title}'
@@ -599,6 +601,82 @@ def privacy(lang):
     return document(lang, "privacy", p["title"] + " — OpenCCman", p["description"], body, fonts=serif(lang) + ("hand",))
 
 
+# Vertical card tool (#17) ------------------------------------------------------------------
+
+# Each page starts on the font and punctuation convention its readers expect.
+VERTICAL_DEFAULTS = {"zh-Hans": ("serif-sc", "cn", "zh-Hans"), "zh-Hant": ("serif-tc", "tw", "zh-Hant"),
+                     "en": ("serif-sc", "cn", "zh-Hans")}
+VERTICAL_SIZES = (("34", "3:4"), ("11", "1:1"), ("916", "9:16"))
+VERTICAL_SCALES = (("1", "1080 px"), ("2", "2160 px"))
+
+
+def vc_cells(name, options, checked, legend):
+    options = list(options)
+    radios = "".join(
+        f'<label><input type="radio" name="{name}" value="{value}"{" checked" if value == checked else ""}>'
+        f'<span>{esc(label)}</span></label>' for value, label in options)
+    return (f'<fieldset class="vc-field"><legend class="vc-label">{esc(legend)}</legend>'
+            f'<div class="presets n{len(options)}">{radios}</div></fieldset>')
+
+
+def vertical(lang):
+    """The card is drawn by assets/vertical.js; this markup is its form and labels."""
+    v = VERTICAL[lang]
+    font, punct, text_lang = VERTICAL_DEFAULTS[lang]
+    name, text, sig, seal = v["sample_list"][0]
+    samples = "".join(
+        f'<button class="vc-sample" type="button" data-text="{esc(t)}" data-sig="{esc(g)}" data-seal="{esc(l)}">'
+        f'{esc(n)}</button>' for n, t, g, l in v["sample_list"])
+    messages = "".join(f' data-{key}="{esc(v[key])}"' for key in ("loading", "overflow", "failed"))
+    form = (
+        '<form class="vc-form" data-form>'
+        f'<div class="vc-field"><label class="vc-label" for="vc-text">{esc(v["text"])}</label>'
+        f'<textarea id="vc-text" name="text" rows="6" lang="{text_lang}" spellcheck="false">{esc(text)}</textarea>'
+        f'<div class="vc-samples" role="group" aria-label="{esc(v["samples"])}">{samples}</div></div>'
+        '<div class="vc-pair">'
+        f'<div class="vc-field"><label class="vc-label" for="vc-sig">{esc(v["sig"])}</label>'
+        f'<input id="vc-sig" name="sig" type="text" lang="{text_lang}" value="{esc(sig)}" spellcheck="false"></div>'
+        f'<div class="vc-field"><label class="vc-label" for="vc-seal">{esc(v["seal"])}</label>'
+        f'<input id="vc-seal" name="seal" type="text" lang="{text_lang}" maxlength="4" value="{esc(seal)}" spellcheck="false"></div>'
+        '</div>'
+        f'{vc_cells("font", v["fonts"].items(), font, v["font"])}'
+        f'{vc_cells("punct", v["puncts"].items(), punct, v["punct"])}'
+        f'<label class="vc-check"><input type="checkbox" name="quotes" checked><span>{esc(v["quotes"])}</span></label>'
+        f'{vc_cells("paper", v["papers"].items(), "paper", v["paper"])}'
+        f'{vc_cells("size", VERTICAL_SIZES, "34", v["size"])}'
+        f'<div class="vc-field"><label class="vc-label" for="vc-per">{esc(v["per"])} <output data-per for="vc-per"></output></label>'
+        '<input id="vc-per" name="per" type="range" min="5" max="28" step="1" value="12">'
+        f'<label class="vc-check"><input type="checkbox" name="auto" checked><span>{esc(v["auto"])}</span></label></div>'
+        f'{vc_cells("scale", VERTICAL_SCALES, "1", v["scale"])}'
+        '</form>'
+    )
+    # Preview, form, then export: on a phone the export follows the settings it uses.
+    slip = (
+        f'<figure class="vc-slip"><div class="vc-frame" data-frame><canvas data-canvas role="img" aria-label="{esc(v["preview"])}"></canvas>'
+        f'<p class="vc-status" data-status hidden>{esc(v["loading"])}</p></div>'
+        '<figcaption class="vc-warn" data-warn aria-live="polite"></figcaption></figure>'
+    )
+    output = (
+        '<div class="vc-out">'
+        f'<div class="actions"><button class="stamp" type="button" data-export disabled>{esc(v["export"])}</button></div>'
+        '<section class="vc-result" data-result hidden aria-labelledby="vc-result-title">'
+        f'<h2 class="vc-label" id="vc-result-title">{esc(v["result"])}</h2>'
+        f'<img data-out alt="{esc(v["result_alt"])}"><p class="meta">{esc(v["hint"])}</p>'
+        f'<p class="vc-links"><button class="vc-link" type="button" data-share hidden>{esc(v["share"])}</button>'
+        f'<a class="vc-link" data-download download="vertical-card.png" href="#">{esc(v["download"])}</a></p>'
+        '</section></div>'
+    )
+    body = (
+        f'<div class="wrap"><header class="page-head">{heading("h1", v["h1"], lang, cls="ms-xl")}'
+        f'<p class="lede">{v["lede"]}</p></header>'
+        f'<div class="vc" data-vertical{messages}>{slip}{form}{output}</div>'
+        f'<div class="vc-notes">{note(lang, v["convert"] + " " + v["privacy"])}'
+        f'<noscript><p class="meta">{esc(v["nojs"])}</p></noscript></div></div>'
+    )
+    return document(lang, "vertical-card", v["title"], v["description"], body, fonts=serif(lang) + ("hand",),
+                    body_class="page-vertical", scripts=("/assets/vertical.js",))
+
+
 # 404 and language chooser -----------------------------------------------------------------
 
 def not_found():
@@ -654,11 +732,12 @@ def pages():
         rendered[SITE / lang / "changelog.html"] = changelog(lang)
         rendered[SITE / lang / "support.html"] = support(lang)
         rendered[SITE / lang / "privacy.html"] = privacy(lang)
+        rendered[SITE / lang / "vertical-card.html"] = vertical(lang)
     rendered[SITE / "404.html"] = not_found()
     rendered[SITE / "index.html"] = chooser()
     rendered[SITE / "assets" / "specimens.js"] = specimens_js()
     paths = [f"/{lang}/{page}" for lang in LANGUAGES for page in (
-        "", "privacy", "support", "changelog", "guides/", *(f"guides/{slug}" for slug in ARTICLES))]
+        "", "privacy", "support", "changelog", "vertical-card", "guides/", *(f"guides/{slug}" for slug in ARTICLES))]
     rendered[SITE / "sitemap.xml"] = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
