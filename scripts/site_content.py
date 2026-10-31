@@ -332,6 +332,36 @@ CHANGELOG = {
         "intro": "这里记录用户能感知的变化及系统、文件格式限制。完整的工程变更保留在应用仓库。",
         "releases": [
             {
+                "id": "version-22",
+                "version": "2.2",
+                "date": "2026 年 11 月 1 日发布",
+                "note": "适用于 iOS/iPadOS 15 及以上、macOS 12 及以上。iPhone/iPad 的 100 MiB 文件转换仅限 Pro、单个 UTF-8 TXT，需在应用打开时进行；编辑区导入和拖放仍为 10 MiB。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">查看 2.2 发布说明</a>。",
+                "groups": [
+                    [
+                        "新增",
+                        [
+                            "iPhone 和 iPad 上的 Pro 可将单个大于 10 MiB、最多 100 MiB 的 UTF-8 TXT 文件直接转换，再通过系统存储面板保存到自选位置，不占用当前编辑区的原文和结果，也不计入主页次数。任务显示进度并可取消；切到后台或锁屏会安全中止。已完成的结果在保存或删除前一直保留，重启应用也不丢失。"
+                        ]
+                    ],
+                    [
+                        "变更",
+                        [
+                            "iPhone 的工作区按实际窗口大小排列，宽窗口可左右对照原文和结果；主要操作、返回和关闭按钮移入系统导航栏。",
+                            "iPhone 和 iPad 的 Pro 提示改用系统提醒；未显示的文件错误会在提示或 Pro 页面关闭后显示，不再丢失。",
+                            "Mac 菜单栏图标默认显示，之前手动开启或关闭过的设置保持不变；设置中的开关采用更新后的样式。"
+                        ]
+                    ],
+                    [
+                        "修复",
+                        [
+                            "「更多」收进 Mac 工具栏溢出菜单时，⌘, 仍可打开设置、⌘P 仍可打开 Pro，并保留阅读位置。",
+                            "窄 Mac 窗口中较长的导入提示会自动换行；从设置或 Pro 页面返回后，工作区面板保持原有高度。",
+                            "每个新窗口从首页开始；导出文件的窗口关闭后，已完成的结果仍可重新保存。"
+                        ]
+                    ]
+                ]
+            },
+            {
                 "id": "version-21",
                 "version": "2.1",
                 "date": "2026 年 10 月 1 日发布",
@@ -406,6 +436,36 @@ CHANGELOG = {
         "intro": "這裡記錄使用者能察覺的變更，以及系統與檔案格式限制。完整工程變更保留在 App 儲存庫。",
         "releases": [
             {
+                "id": "version-22",
+                "version": "2.2",
+                "date": "2026 年 11 月 1 日推出",
+                "note": "適用於 iOS/iPadOS 15 以上、macOS 12 以上。iPhone/iPad 的 100 MiB 檔案轉換僅限 Pro、單一 UTF-8 TXT，需在 App 開啟時進行；編輯區匯入與拖放仍為 10 MiB。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">檢視 2.2 發布說明</a>。",
+                "groups": [
+                    [
+                        "新增",
+                        [
+                            "iPhone 與 iPad 上的 Pro 可將單一大於 10 MiB、最多 100 MiB 的 UTF-8 TXT 檔案直接轉換，再透過系統儲存面板存到自選位置，不動目前編輯區的原文與結果，也不計入首頁次數。工作會顯示進度並可取消；切到背景或鎖定螢幕會安全中止。已完成的結果在儲存或刪除前一直保留，重新啟動 App 也不會遺失。"
+                        ]
+                    ],
+                    [
+                        "變更",
+                        [
+                            "iPhone 的工作區依實際視窗大小排列，寬視窗可左右對照原文與結果；主要操作、返回與關閉按鈕移入系統導覽列。",
+                            "iPhone 與 iPad 的 Pro 提示改用系統提示框；未顯示的檔案錯誤會在提示或 Pro 頁面關閉後顯示，不再遺失。",
+                            "Mac 選單列圖示預設顯示，先前手動開啟或關閉過的設定保持不變；設定中的開關採用更新後的樣式。"
+                        ]
+                    ],
+                    [
+                        "修正",
+                        [
+                            "「更多」收進 Mac 工具列溢出選單時，⌘, 仍可開啟設定、⌘P 仍可開啟 Pro，並保留閱讀位置。",
+                            "窄 Mac 視窗中較長的匯入提示會自動換行；從設定或 Pro 頁面返回後，工作區面板保持原有高度。",
+                            "每個新視窗從首頁開始；匯出檔案的視窗關閉後，已完成的結果仍可重新儲存。"
+                        ]
+                    ]
+                ]
+            },
+            {
                 "id": "version-21",
                 "version": "2.1",
                 "date": "2026 年 10 月 1 日推出",
@@ -479,6 +539,36 @@ CHANGELOG = {
         "description": "OpenCCman release notes and compatibility details for iPhone, iPad and Mac.",
         "intro": "Release notes describe changes you can use, along with platform and file-format limits. The full engineering history remains in the app repository.",
         "releases": [
+            {
+                "id": "version-22",
+                "version": "2.2",
+                "date": "Published 1 November 2026",
+                "note": "Requires iOS/iPadOS 15+ or macOS 12+. The 100 MiB file conversion on iPhone/iPad is Pro only, for one UTF-8 TXT at a time, and runs while the app is open; editor imports and drag and drop remain limited to 10 MiB. <a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">Read the 2.2 release notes</a>.",
+                "groups": [
+                    [
+                        "Added",
+                        [
+                            "On iPhone and iPad, Pro can convert one UTF-8 TXT file larger than 10 MiB, up to 100 MiB, directly to a file saved where you choose in the system save panel. The current draft and result stay in place, and homepage conversions are not used. The task shows progress and can be cancelled; it stops safely if the app moves to the background or the device locks. A finished result is kept until you save or delete it, even after an app restart."
+                        ]
+                    ],
+                    [
+                        "Changed",
+                        [
+                            "On iPhone, the workspace follows the actual window size, so wide windows can show source and result side by side. Main actions, Back and Close now use the system navigation bar.",
+                            "The Pro prompt on iPhone and iPad uses a system alert; a pending file error is shown after the prompt or Pro page closes instead of being lost.",
+                            "The Mac menu bar icon is shown by default, and an earlier on/off choice is kept. Settings switches use an updated style."
+                        ]
+                    ],
+                    [
+                        "Fixed",
+                        [
+                            "On Mac, ⌘, opens Settings and ⌘P opens Pro even when More is in the toolbar overflow menu, keeping your reading position.",
+                            "Long import hints wrap in narrow Mac windows, and workspace panes keep their height after you return from Settings or Pro.",
+                            "Each new window starts at the home screen, and a finished file result can still be saved after the exporting window closes."
+                        ]
+                    ]
+                ]
+            },
             {
                 "id": "version-21",
                 "version": "2.1",
