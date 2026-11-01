@@ -22,7 +22,7 @@ LOCALES = {
             "On Mac, set up selection shortcuts when you want to work across apps.",
             "Learn how the upstream OpenCC project powers the app and where its scope differs.",
         ],
-        "scope": "These steps describe the publicly available 2.0 app on iPhone, iPad and Mac. Features still being tested for 2.1 are listed separately in the changelog.",
+        "scope": "These steps describe the public 2.2 app on iPhone, iPad and Mac. Changes in each version are listed in the changelog.",
         "related": "More guides",
         "back": "All guides",
         "cta_title": "Ready to try it?",
@@ -50,7 +50,7 @@ LOCALES = {
             "需要跨 App 工作时，再设置 Mac 选中文字快捷键。",
             "了解提供转换能力的 OpenCC 原始项目，以及它和 App 的区别。",
         ],
-        "scope": "以下步骤对应已公开的 iPhone、iPad、Mac 2.0 版。仍在验收的 2.1 功能单独列于更新记录。",
+        "scope": "以下步骤对应已公开的 iPhone、iPad、Mac 2.2 版。各版本的变化见更新记录。",
         "related": "继续阅读",
         "back": "所有指南",
         "cta_title": "开始转换",
@@ -78,7 +78,7 @@ LOCALES = {
             "需要跨 App 工作時，再設定 Mac 所選文字快捷鍵。",
             "認識提供轉換能力的 OpenCC 原始專案，以及它與 App 的差別。",
         ],
-        "scope": "以下步驟對應已公開的 iPhone、iPad、Mac 2.0 版。仍在驗收的 2.1 功能另列於更新紀錄。",
+        "scope": "以下步驟對應已公開的 iPhone、iPad、Mac 2.2 版。各版本的變化見更新紀錄。",
         "related": "繼續閱讀",
         "back": "所有指南",
         "cta_title": "開始轉換",
@@ -105,7 +105,7 @@ ARTICLES = {
 <li><strong>Compare before copying.</strong> Review names, specialist terms and sentences where more than one Chinese form is possible. Copy or export only the result you want to use.</li>
 </ol></section>
 <section><h2>What the result means</h2><p>OpenCC converts character forms and dictionary phrases. It does not translate between languages or rewrite a sentence for a different audience. The Simplified preset is not a complete reverse conversion of Taiwan-specific vocabulary. If you change the preset after converting, run Convert again to produce a result using the new choice.</p><p>Free use includes 12 conversions from the home workspace each day. A conversion that fails or is canceled does not use an allowance; Pro has no home-workspace limit.</p></section>
-<aside class="guide-note"><strong>Working with a document?</strong> Import one UTF-8 TXT file instead of pasting a long draft. See the <a href="convert-txt.html">TXT guide</a> for the 10 MiB limit and export behavior.</aside>
+<aside class="guide-note"><strong>Working with a document?</strong> Import one UTF-8 TXT file instead of pasting a long draft. See the <a href="convert-txt.html">TXT guide</a> for file limits and export behavior.</aside>
 """,
         },
         "zh-Hans": {
@@ -199,38 +199,41 @@ ARTICLES = {
     "convert-txt": {
         "en": {
             "title": "Convert a UTF-8 TXT file without losing your draft",
-            "description": "Import or drop one UTF-8 TXT file up to 10 MiB in OpenCCman, convert it, and export the latest result as UTF-8.",
+            "description": "Import or drop one UTF-8 TXT file up to 10 MiB in OpenCCman, convert it, and export the result as UTF-8. With Pro, larger files convert directly to a new file.",
             "card": "Convert a TXT document",
             "summary": "Check encoding and size, import one file, then export the converted result.",
-            "lede": "Use the file workflow for a document you want to keep as a TXT file. The public 2.0 app handles one UTF-8 file at a time, up to 10 MiB.",
+            "lede": "Use the file workflow for a document you want to keep as a TXT file. The editor handles one UTF-8 file at a time, up to 10 MiB. With Pro, a larger file converts directly to a new file: up to 1 GiB on Mac and 100 MiB on iPhone and iPad.",
             "body": """
-<section><h2>Before importing</h2><p>Save the document as plain-text <code>.txt</code> in UTF-8. A UTF-8 byte-order mark (BOM) is accepted. The app does not guess Big5, GBK or another encoding. If the file exceeds 10 MiB, reduce it or split it before using the public 2.0 workflow.</p></section>
+<section><h2>Before importing</h2><p>Save the document as plain-text <code>.txt</code> in UTF-8. A UTF-8 byte-order mark (BOM) is accepted. The app does not guess Big5, GBK or another encoding. If the file exceeds 10 MiB, use the Pro large-file conversion below, or reduce or split it first.</p></section>
 <section><h2>Import, convert, export</h2><ol class="guide-steps"><li><strong>Import one file.</strong> Choose Import TXT in the workspace, or drop a single TXT file onto it. A successful import replaces the source text.</li><li><strong>Choose a preset and convert.</strong> Read the source and result together; a new file is not saved automatically.</li><li><strong>Choose Export TXT.</strong> The app exports the latest successful result as UTF-8 without a BOM. For example, <code>essay.txt</code> suggests <code>essay-converted.txt</code>; choose the save location in the system panel.</li></ol></section>
-<section><h2>If something goes wrong</h2><p>An oversized or invalidly encoded import keeps the previous draft. A failed or canceled conversion does not replace the last successful result. The file flow preserves line endings, blank lines, Emoji, combining characters and embedded U+0000; still inspect the converted words before sharing the document.</p><p>Large-file Pro conversion is described in the <a href="../changelog.html">2.1 candidate notes</a> and is not part of this public 2.0 guide.</p></section>
+<section><h2>If something goes wrong</h2><p>An oversized or invalidly encoded import keeps the previous draft. A failed or canceled conversion does not replace the last successful result. The file flow preserves line endings, blank lines, Emoji, combining characters and embedded U+0000; still inspect the converted words before sharing the document.</p></section>
+<section><h2>Larger files with Pro</h2><p>With Pro, choose Import TXT and pick one UTF-8 TXT file larger than 10 MiB. On Mac it can be up to 1 GiB; on iPhone and iPad, up to 100 MiB. The file is converted directly to a new file and you choose where to save it. Its text does not enter the editor, so the current draft and result stay in place, and homepage conversions are not used. The task shows progress and can be canceled.</p><p>On iPhone and iPad, keep the app open while it converts: moving to the background or locking the device stops the task safely. A finished result is kept until you save or delete it, even after an app restart. Drag and drop on iPhone and iPad stays limited to 10 MiB. Batch conversion is not supported.</p></section>
 """,
         },
         "zh-Hans": {
             "title": "如何转换 UTF-8 TXT 文稿并导出结果",
-            "description": "在 OpenCCman 中导入或拖入不超过 10 MiB 的单个 UTF-8 TXT 文件，转换后导出最新成功结果。",
+            "description": "在 OpenCCman 中导入或拖入不超过 10 MiB 的单个 UTF-8 TXT 文件，转换后导出结果。Pro 可把更大的文件直接转换成新文件。",
             "card": "转换 TXT 文稿",
             "summary": "检查编码和大小，导入单个文件，再导出转换结果。",
-            "lede": "要把文稿继续保存为 TXT，可使用文件工作流。已公开的 2.0 版每次处理一个 UTF-8 文件，上限 10 MiB。",
+            "lede": "要把文稿继续保存为 TXT，可使用文件工作流。编辑区每次处理一个 UTF-8 文件，上限 10 MiB；Pro 可把更大的文件直接转换成新文件，Mac 最大 1 GiB，iPhone 和 iPad 最大 100 MiB。",
             "body": """
-<section><h2>导入前先检查</h2><p>把文稿存为 UTF-8 编码的纯文本 <code>.txt</code>。可以带 UTF-8 BOM。应用不会猜测 Big5、GBK 等其他编码。如果文件超过 10 MiB，请先缩小或拆分，再使用已公开的 2.0 工作流。</p></section>
+<section><h2>导入前先检查</h2><p>把文稿存为 UTF-8 编码的纯文本 <code>.txt</code>。可以带 UTF-8 BOM。应用不会猜测 Big5、GBK 等其他编码。如果文件超过 10 MiB，可使用下文的 Pro 大文件转换，或先缩小、拆分。</p></section>
 <section><h2>导入、转换、导出</h2><ol class="guide-steps"><li><strong>导入一个文件。</strong>在工作区选择“导入 TXT”，或把单个 TXT 文件拖入工作区。导入成功后会替换原文。</li><li><strong>选择预设并转换。</strong>对照原文和结果；转换完成不会自动保存新文件。</li><li><strong>选择“导出 TXT”。</strong>应用把最近一次成功结果存为不带 BOM 的 UTF-8。例如导入 <code>essay.txt</code> 时，建议文件名是 <code>essay-converted.txt</code>；保存位置由系统面板选择。</li></ol></section>
-<section><h2>遇到错误时</h2><p>文件过大或编码无效时，原有文稿不会被覆盖。转换失败或取消也不会替换最近一次成功结果。文件流程保留换行、空行、Emoji、组合字符和 U+0000；分享前仍应校对转换后的用词。</p><p>大文件 Pro 转换见<a href="../changelog.html">2.1 候选版说明</a>，不属于已公开的 2.0 指南。</p></section>
+<section><h2>遇到错误时</h2><p>文件过大或编码无效时，原有文稿不会被覆盖。转换失败或取消也不会替换最近一次成功结果。文件流程保留换行、空行、Emoji、组合字符和 U+0000；分享前仍应校对转换后的用词。</p></section>
+<section><h2>用 Pro 转换文件</h2><p>开通 Pro 后，选择“导入 TXT”并选取单个大于 10 MiB 的 UTF-8 TXT 文件：Mac 上最大 1 GiB，iPhone 和 iPad 上最大 100 MiB。文件会直接转换成新文件，保存位置由你选择。正文不进入编辑区，当前原文和结果保持不变，也不计入主页次数。任务会显示进度，并可随时取消。</p><p>在 iPhone 和 iPad 上转换时请保持应用打开：切到后台或锁屏会安全中止任务。已完成的结果在保存或删除前一直保留，重启应用也不会丢失。iPhone 和 iPad 上的拖放仍以 10 MiB 为上限。不支持批量转换。</p></section>
 """,
         },
         "zh-Hant": {
             "title": "如何轉換 UTF-8 TXT 文件並匯出結果",
-            "description": "在 OpenCCman 匯入或拖入不超過 10 MiB 的單個 UTF-8 TXT 檔案，轉換後匯出最近一次成功結果。",
+            "description": "在 OpenCCman 匯入或拖入不超過 10 MiB 的單個 UTF-8 TXT 檔案，轉換後匯出結果。Pro 可把更大的檔案直接轉換成新檔案。",
             "card": "轉換 TXT 文件",
             "summary": "檢查編碼與大小，匯入單個檔案，再匯出轉換結果。",
-            "lede": "要把文件繼續儲存為 TXT，可使用檔案流程。已公開的 2.0 版每次處理一個 UTF-8 檔案，上限 10 MiB。",
+            "lede": "要把文件繼續儲存為 TXT，可使用檔案流程。編輯區每次處理一個 UTF-8 檔案，上限 10 MiB；Pro 可把更大的檔案直接轉換成新檔案，Mac 最多 1 GiB，iPhone 與 iPad 最多 100 MiB。",
             "body": """
-<section><h2>匯入前先檢查</h2><p>把文件儲存為 UTF-8 編碼的純文字 <code>.txt</code>。可以包含 UTF-8 BOM。App 不會猜測 Big5、GBK 等其他編碼。若檔案超過 10 MiB，請先縮小或拆分，再使用已公開的 2.0 流程。</p></section>
+<section><h2>匯入前先檢查</h2><p>把文件儲存為 UTF-8 編碼的純文字 <code>.txt</code>。可以包含 UTF-8 BOM。App 不會猜測 Big5、GBK 等其他編碼。若檔案超過 10 MiB，可使用下文的 Pro 大檔案轉換，或先縮小、拆分。</p></section>
 <section><h2>匯入、轉換、匯出</h2><ol class="guide-steps"><li><strong>匯入一個檔案。</strong>在工作區選擇「匯入 TXT」，或把單個 TXT 檔案拖入工作區。匯入成功後會取代原文。</li><li><strong>選擇預設並轉換。</strong>對照原文與結果；轉換完成不會自動儲存新檔案。</li><li><strong>選擇「匯出 TXT」。</strong>App 把最近一次成功結果存成不帶 BOM 的 UTF-8。例如匯入 <code>essay.txt</code> 時，建議檔名為 <code>essay-converted.txt</code>；儲存位置由系統面板選擇。</li></ol></section>
-<section><h2>遇到錯誤時</h2><p>檔案過大或編碼無效時，原有文件不會被覆蓋。轉換失敗或取消也不會取代最近一次成功結果。檔案流程保留換行、空行、Emoji、組合字元與 U+0000；分享前仍應校對轉換後的用詞。</p><p>大檔案 Pro 轉換見<a href="../changelog.html">2.1 候選版說明</a>，不屬於已公開的 2.0 指南。</p></section>
+<section><h2>遇到錯誤時</h2><p>檔案過大或編碼無效時，原有文件不會被覆蓋。轉換失敗或取消也不會取代最近一次成功結果。檔案流程保留換行、空行、Emoji、組合字元與 U+0000；分享前仍應校對轉換後的用詞。</p></section>
+<section><h2>用 Pro 轉換文件</h2><p>開通 Pro 後，選擇「匯入 TXT」並選取單一大於 10 MiB 的 UTF-8 TXT 檔案：Mac 上最多 1 GiB，iPhone 與 iPad 上最多 100 MiB。檔案會直接轉換成新檔案，儲存位置由你選擇。正文不進入編輯區，目前的原文與結果保持不變，也不計入首頁次數。工作會顯示進度，並可隨時取消。</p><p>在 iPhone 與 iPad 上轉換時請保持 App 開啟：切到背景或鎖定螢幕會安全中止工作。已完成的結果在儲存或刪除前一直保留，重新啟動 App 也不會遺失。iPhone 與 iPad 上的拖放仍以 10 MiB 為上限。不支援批次轉換。</p></section>
 """,
         },
     },
