@@ -335,6 +335,7 @@ CHANGELOG = {
                 "id": "version-22",
                 "version": "2.2",
                 "date": "2026 年 11 月 1 日发布",
+                "film": {"src": "openccman-2.2-zh-Hans", "note": "2.2 更新视频 · 21 秒 · 含音乐", "load": "点击后才加载 · 约 2.6 MB", "play": "播放 2.2 更新视频"},
                 "note": "适用于 iOS/iPadOS 15 及以上、macOS 12 及以上。iPhone/iPad 的 100 MiB 文件转换仅限 Pro、单个 UTF-8 TXT，需在应用打开时进行；编辑区导入和拖放仍为 10 MiB。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">查看 2.2 发布说明</a>。",
                 "groups": [
                     [
@@ -439,6 +440,7 @@ CHANGELOG = {
                 "id": "version-22",
                 "version": "2.2",
                 "date": "2026 年 11 月 1 日推出",
+                "film": {"src": "openccman-2.2-zh-Hant", "note": "2.2 更新影片 · 21 秒 · 含音樂", "load": "點擊後才載入 · 約 2.6 MB", "play": "播放 2.2 更新影片"},
                 "note": "適用於 iOS/iPadOS 15 以上、macOS 12 以上。iPhone/iPad 的 100 MiB 檔案轉換僅限 Pro、單一 UTF-8 TXT，需在 App 開啟時進行；編輯區匯入與拖放仍為 10 MiB。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">檢視 2.2 發布說明</a>。",
                 "groups": [
                     [
@@ -543,6 +545,7 @@ CHANGELOG = {
                 "id": "version-22",
                 "version": "2.2",
                 "date": "Published 1 November 2026",
+                "film": {"src": "openccman-2.2-en", "note": "What's new in 2.2 · 21 seconds · with music", "load": "Loads only after you press play · about 2.6 MB", "play": "Play the 2.2 video"},
                 "note": "Requires iOS/iPadOS 15+ or macOS 12+. The 100 MiB file conversion on iPhone/iPad is Pro only, for one UTF-8 TXT at a time, and runs while the app is open; editor imports and drag and drop remain limited to 10 MiB. <a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">Read the 2.2 release notes</a>.",
                 "groups": [
                     [

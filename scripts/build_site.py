@@ -551,6 +551,16 @@ def changelog(lang):
             display(label, lang)
             groups += f'<div><h3>{label}</h3><ul class="ticks">{"".join(f"<li>{i}</li>" for i in items)}</ul></div>'
         release_note = note(lang, release["note"]) if "note" in release else ""
+        if "film" in release:
+            f, h = release["film"], HOME[lang]
+            video, note_id = f"/assets/motion/{f['src']}", f'{release["id"]}-film-note'
+            release_note += (
+                '<div class="film-plate" data-film>'
+                f'<video controls preload="none" playsinline width="1600" height="900" poster="{video}.jpg" aria-describedby="{note_id}">'
+                f'<source src="{video}.mp4" type="video/mp4"><a href="{video}.mp4">{h["film_download"]}</a></video>'
+                f'<button class="film-play" type="button" hidden aria-label="{f["play"]}"><span class="disc">{ring_svg(1, 2)}{PLAY}</span></button>'
+                '</div>'
+                f'<p class="film-caption meta" id="{note_id}"><span>{f["note"]}</span><span>{f["load"]}</span></p>')
         entries.append(
             f'<section class="release" aria-labelledby="{release["id"]}"><div class="release-no">'
             f'<h2 class="ms ms-l digits" id="{release["id"]}" aria-label="{release["version"]}">{digits}</h2>{badge}</div>'
