@@ -158,12 +158,12 @@ PROOF = {
 HOME = {
     "zh-Hans": {
         "title": "OpenCCman — 让中文，恰如其分。",
-        "description": "OpenCCman 2.0 支持 Mac 全局快捷键、TXT 导入导出，以及 iPhone、iPad、Mac 上的原文结果对照。基于 OpenCC，在设备本地转换简繁与地区用语。",
+        "description": "OpenCCman 2.2 支持 Mac 全局快捷键、TXT 导入导出，以及 iPhone、iPad、Mac 上的原文结果对照。基于 OpenCC，在设备本地转换简繁与地区用语。",
         "h1": [
             "让中文，",
             "恰如其分。"
         ],
-        "intro": "OpenCCman 2.0 支持 Mac 全局快捷键、TXT 导入导出，以及 iPhone、iPad、Mac 上的原文结果对照。基于 OpenCC，在设备本地转换简繁与地区用语。",
+        "intro": "OpenCCman 2.2 支持 Mac 全局快捷键、TXT 导入导出，以及 iPhone、iPad、Mac 上的原文结果对照。基于 OpenCC，在设备本地转换简繁与地区用语。",
         "platforms": "iPhone · iPad · Mac",
         "features_title": "熟悉的文字，合适的表达。",
         "features": [
@@ -177,7 +177,7 @@ HOME = {
             ],
             [
                 "带上 TXT 文稿",
-                "导入或拖入单个 UTF-8 TXT 文件，转换后导出结果。支持不超过 10 MiB 的文件，正文在本机处理。"
+                "导入或拖入单个 UTF-8 TXT 文件，转换后导出结果，正文在本机处理。编辑区支持不超过 10 MiB 的文件；Pro 可把更大的文件直接转换成新文件，Mac 最大 1 GiB，iPhone 和 iPad 最大 100 MiB。"
             ]
         ],
         "fig": {
@@ -196,11 +196,11 @@ HOME = {
             "chips": [
                 "单个文件",
                 "UTF-8",
-                "不超过 10 MiB"
+                "编辑区 10 MiB"
             ]
         },
-        "film_title": "看看 OpenCCman 2.0 如何工作。",
-        "film_lead": "选择预设，对照原文与结果，在 iPhone、iPad 和 Mac 上处理 TXT 文稿。OpenCCman 2.0 已在 App Store 上架。",
+        "film_title": "看看 OpenCCman 如何工作。",
+        "film_lead": "选择预设，对照原文与结果，在 iPhone、iPad 和 Mac 上处理 TXT 文稿。视频展示的是 2.0 版界面。",
         "film_note": "产品视频 · 25 秒 · 含音乐",
         "film_load": "点击后才加载 · 约 3 MB",
         "film_play": "播放产品视频",
@@ -214,12 +214,12 @@ HOME = {
     },
     "zh-Hant": {
         "title": "OpenCCman — 讓中文，恰如其分。",
-        "description": "OpenCCman 2.0 支援 Mac 全域快速鍵、TXT 匯入匯出，以及 iPhone、iPad、Mac 上的原文結果對照。以 OpenCC 在裝置本機轉換簡繁與地區用語。",
+        "description": "OpenCCman 2.2 支援 Mac 全域快速鍵、TXT 匯入匯出，以及 iPhone、iPad、Mac 上的原文結果對照。以 OpenCC 在裝置本機轉換簡繁與地區用語。",
         "h1": [
             "讓中文，",
             "恰如其分。"
         ],
-        "intro": "OpenCCman 2.0 支援 Mac 全域快速鍵、TXT 匯入匯出，以及 iPhone、iPad、Mac 上的原文結果對照。以 OpenCC 在裝置本機轉換簡繁與地區用語。",
+        "intro": "OpenCCman 2.2 支援 Mac 全域快速鍵、TXT 匯入匯出，以及 iPhone、iPad、Mac 上的原文結果對照。以 OpenCC 在裝置本機轉換簡繁與地區用語。",
         "platforms": "iPhone · iPad · Mac",
         "features_title": "熟悉的文字，合適的表達。",
         "features": [
@@ -233,7 +233,7 @@ HOME = {
             ],
             [
                 "帶上 TXT 文稿",
-                "匯入或拖入單一 UTF-8 TXT 檔案，轉換後匯出結果。支援不超過 10 MiB 的檔案，正文在本機處理。"
+                "匯入或拖入單一 UTF-8 TXT 檔案，轉換後匯出結果，正文在本機處理。編輯區支援不超過 10 MiB 的檔案；Pro 可把更大的檔案直接轉換成新檔案，Mac 最多 1 GiB，iPhone 與 iPad 最多 100 MiB。"
             ]
         ],
         "fig": {
@@ -252,11 +252,11 @@ HOME = {
             "chips": [
                 "單一檔案",
                 "UTF-8",
-                "不超過 10 MiB"
+                "編輯區 10 MiB"
             ]
         },
-        "film_title": "看看 OpenCCman 2.0 如何運作。",
-        "film_lead": "選擇預設，對照原文與結果，在 iPhone、iPad 和 Mac 上處理 TXT 文稿。OpenCCman 2.0 已於 App Store 上架。",
+        "film_title": "看看 OpenCCman 如何運作。",
+        "film_lead": "選擇預設，對照原文與結果，在 iPhone、iPad 和 Mac 上處理 TXT 文稿。影片展示的是 2.0 版介面。",
         "film_note": "產品影片 · 25 秒 · 含音樂",
         "film_load": "點擊後才載入 · 約 3 MB",
         "film_play": "播放產品影片",
@@ -270,11 +270,11 @@ HOME = {
     },
     "en": {
         "title": "OpenCCman — Chinese, in the right words.",
-        "description": "OpenCCman 2.0 brings Mac global shortcuts, TXT import and export, and a flexible source-and-result workspace to iPhone, iPad and Mac. Convert Chinese on your device with OpenCC.",
+        "description": "OpenCCman 2.2 brings Mac global shortcuts, TXT import and export, and a flexible source-and-result workspace to iPhone, iPad and Mac. Convert Chinese on your device with OpenCC.",
         "h1": [
             "Chinese, in the right words."
         ],
-        "intro": "OpenCCman 2.0 brings Mac global shortcuts, TXT import and export, and a flexible source-and-result workspace to iPhone, iPad and Mac. Convert Chinese on your device with OpenCC.",
+        "intro": "OpenCCman 2.2 brings Mac global shortcuts, TXT import and export, and a flexible source-and-result workspace to iPhone, iPad and Mac. Convert Chinese on your device with OpenCC.",
         "platforms": "iPhone · iPad · Mac",
         "features_title": "Familiar words. Regional nuance.",
         "features": [
@@ -288,7 +288,7 @@ HOME = {
             ],
             [
                 "Bring a TXT file",
-                "Import or drop one UTF-8 TXT file, then export the converted result. Files up to 10 MiB are supported; conversion runs locally."
+                "Import or drop one UTF-8 TXT file, then export the converted result; conversion runs locally. The editor takes files up to 10 MiB, and Pro converts larger files directly to a new file: up to 1 GiB on Mac and 100 MiB on iPhone and iPad."
             ]
         ],
         "fig": {
@@ -307,11 +307,11 @@ HOME = {
             "chips": [
                 "One file",
                 "UTF-8",
-                "Up to 10 MiB"
+                "10 MiB in the editor"
             ]
         },
-        "film_title": "See OpenCCman 2.0 in action.",
-        "film_lead": "Choose a preset, compare source and result, and work with TXT documents on iPhone, iPad and Mac. OpenCCman 2.0 is available on the App Store.",
+        "film_title": "See OpenCCman in action.",
+        "film_lead": "Choose a preset, compare source and result, and work with TXT documents on iPhone, iPad and Mac. The video shows the 2.0 interface.",
         "film_note": "Product video · 25 seconds · with music",
         "film_load": "Loads only after you press play · about 3 MB",
         "film_play": "Play the product video",
