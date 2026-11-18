@@ -158,26 +158,26 @@ PROOF = {
 HOME = {
     "zh-Hans": {
         "title": "OpenCCman — 让中文，恰如其分。",
-        "description": "OpenCCman 2.2 支持 Mac 全局快捷键、TXT 导入导出，以及 iPhone、iPad、Mac 上的原文结果对照。基于 OpenCC，在设备本地转换简繁与地区用语。",
+        "description": "OpenCCman 2.3 帮你查看每处转换差异，恢复 Mac 快捷键原位替换，并新增 Mac 批量 TXT 转换与 iPhone、iPad 分享菜单转换。正文由 OpenCC 在设备本地处理。",
         "h1": [
             "让中文，",
             "恰如其分。"
         ],
-        "intro": "OpenCCman 2.2 支持 Mac 全局快捷键、TXT 导入导出，以及 iPhone、iPad、Mac 上的原文结果对照。基于 OpenCC，在设备本地转换简繁与地区用语。",
+        "intro": "OpenCCman 2.3 帮你查看每处转换差异，恢复 Mac 快捷键原位替换，并新增 Mac 批量 TXT 转换与 iPhone、iPad 分享菜单转换。正文由 OpenCC 在设备本地处理。",
         "platforms": "iPhone · iPad · Mac",
         "features_title": "熟悉的文字，合适的表达。",
         "features": [
             [
                 "Mac 全局快捷键",
-                "在其他应用中选中文字，可直接转换并替换可编辑内容，或送到 OpenCCman 检查。替换需辅助功能权限及来源应用支持。"
+                "修复 2.1／2.2 中只打开主窗口的功能回退：在其他应用选中文字，转换后贴回可编辑位置。需系统权限和来源应用支持；转换中切换应用、选区或剪贴板会取消粘贴。"
             ],
             [
                 "原文结果同屏",
-                "Mac 与 iPad 可左右或上下对照；四个预设让常用的简体、繁体及地区用语转换更容易开始。"
+                "转换后可打开“显示差异”，逐处对照并跳转。复制、分享和导出仍为纯文本；编辑原文或更改配置后需重新转换。"
             ],
             [
                 "带上 TXT 文稿",
-                "导入或拖入单个 UTF-8 TXT 文件，转换后导出结果，正文在本机处理。编辑区支持不超过 10 MiB 的文件；Pro 可把更大的文件直接转换成新文件，Mac 最大 1 GiB，iPhone 和 iPad 最大 100 MiB。"
+                "编辑区支持 10 MiB 内的 UTF-8 TXT。Pro 可直接转换更大文件：Mac 每个最多 1 GiB，iPhone／iPad 每个最多 100 MiB。Mac 另支持一次最多 100 个 TXT 的批量转换。"
             ]
         ],
         "fig": {
@@ -214,26 +214,26 @@ HOME = {
     },
     "zh-Hant": {
         "title": "OpenCCman — 讓中文，恰如其分。",
-        "description": "OpenCCman 2.2 支援 Mac 全域快速鍵、TXT 匯入匯出，以及 iPhone、iPad、Mac 上的原文結果對照。以 OpenCC 在裝置本機轉換簡繁與地區用語。",
+        "description": "OpenCCman 2.3 協助你查看每處轉換差異，恢復 Mac 快速鍵原地取代，並新增 Mac 批次 TXT 轉換與 iPhone、iPad 分享選單轉換。正文由 OpenCC 在裝置本機處理。",
         "h1": [
             "讓中文，",
             "恰如其分。"
         ],
-        "intro": "OpenCCman 2.2 支援 Mac 全域快速鍵、TXT 匯入匯出，以及 iPhone、iPad、Mac 上的原文結果對照。以 OpenCC 在裝置本機轉換簡繁與地區用語。",
+        "intro": "OpenCCman 2.3 協助你查看每處轉換差異，恢復 Mac 快速鍵原地取代，並新增 Mac 批次 TXT 轉換與 iPhone、iPad 分享選單轉換。正文由 OpenCC 在裝置本機處理。",
         "platforms": "iPhone · iPad · Mac",
         "features_title": "熟悉的文字，合適的表達。",
         "features": [
             [
                 "Mac 全域快速鍵",
-                "在其他 App 中選取文字，可直接轉換並取代可編輯內容，或送到 OpenCCman 檢查。取代需輔助使用權限及來源 App 支援。"
+                "修正 2.1／2.2 中只開啟主視窗的功能退化：在其他 App 選取文字，轉換後貼回可編輯位置。需系統權限及來源 App 支援；轉換中切換 App、選取範圍或剪貼簿會取消貼上。"
             ],
             [
                 "原文結果同屏",
-                "Mac 與 iPad 可左右或上下對照；四個預設讓常用的簡體、繁體及地區用語轉換更容易開始。"
+                "轉換後可開啟「顯示差異」，逐處對照並跳轉。拷貝、分享與匯出仍為純文字；編輯原文或變更設定後需重新轉換。"
             ],
             [
                 "帶上 TXT 文稿",
-                "匯入或拖入單一 UTF-8 TXT 檔案，轉換後匯出結果，正文在本機處理。編輯區支援不超過 10 MiB 的檔案；Pro 可把更大的檔案直接轉換成新檔案，Mac 最多 1 GiB，iPhone 與 iPad 最多 100 MiB。"
+                "編輯區支援 10 MiB 內的 UTF-8 TXT。Pro 可直接轉換較大檔案：Mac 每個最多 1 GiB，iPhone／iPad 每個最多 100 MiB。Mac 另支援一次最多 100 個 TXT 的批次轉換。"
             ]
         ],
         "fig": {
@@ -270,25 +270,25 @@ HOME = {
     },
     "en": {
         "title": "OpenCCman — Chinese, in the right words.",
-        "description": "OpenCCman 2.2 brings Mac global shortcuts, TXT import and export, and a flexible source-and-result workspace to iPhone, iPad and Mac. Convert Chinese on your device with OpenCC.",
+        "description": "OpenCCman 2.3 shows each conversion difference, restores in-place Mac shortcut replacement, and adds Mac batch TXT conversion and a Share sheet action on iPhone and iPad. OpenCC processes your text on your device.",
         "h1": [
             "Chinese, in the right words."
         ],
-        "intro": "OpenCCman 2.2 brings Mac global shortcuts, TXT import and export, and a flexible source-and-result workspace to iPhone, iPad and Mac. Convert Chinese on your device with OpenCC.",
+        "intro": "OpenCCman 2.3 shows each conversion difference, restores in-place Mac shortcut replacement, and adds Mac batch TXT conversion and a Share sheet action on iPhone and iPad. OpenCC processes your text on your device.",
         "platforms": "iPhone · iPad · Mac",
         "features_title": "Familiar words. Regional nuance.",
         "features": [
             [
                 "Mac global shortcuts",
-                "Convert selected text in another app and replace it in an editable field, or open the selection in OpenCCman. Requires Accessibility permission and a compatible source app."
+                "Fixes the 2.1/2.2 regression that only opened the main window: convert a selection and paste it back into an editable field. Requires system permission and source-app support. Changes to the app, selection or clipboard cancel the paste."
             ],
             [
                 "Read source and result together",
-                "Compare both panes side by side or stacked on Mac and iPad. Four presets make common Chinese conversions easier to start."
+                "Turn on Show Differences after converting to inspect and navigate each change. Copy, share and export stay plain text. Edit the source or change settings, then convert again to refresh the differences."
             ],
             [
                 "Bring a TXT file",
-                "Import or drop one UTF-8 TXT file, then export the converted result; conversion runs locally. The editor takes files up to 10 MiB, and Pro converts larger files directly to a new file: up to 1 GiB on Mac and 100 MiB on iPhone and iPad."
+                "The editor accepts UTF-8 TXT up to 10 MiB. Pro converts larger files directly: up to 1 GiB each on Mac and 100 MiB each on iPhone/iPad. Mac also supports batches of up to 100 TXT files."
             ]
         ],
         "fig": {
@@ -332,10 +332,46 @@ CHANGELOG = {
         "intro": "这里记录用户能感知的变化及系统、文件格式限制。完整的工程变更保留在应用仓库。",
         "releases": [
             {
+                "id": "version-23",
+                "version": "2.3",
+                "date": "2026 年 11 月 19 日发布",
+                "note": "iOS/iPadOS 15+、macOS 12+；主页每日免费 12 次不变。批量转换仅限 Mac Pro，iPhone/iPad 仍一次处理一个文件。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.3\">查看 2.3 发布说明</a>。",
+                "groups": [
+                    [
+                        "修复",
+                        [
+                            "Mac 全局快捷键恢复原位替换，转换成功后不打开主窗口。转换时应用、输入、剪贴板或选区变化会取消粘贴；终端中改为打开原文和结果。失败提示默认开启，成功提示默认关闭，可分别设置。",
+                            "Mac 弹层跟随应用内文字大小；150% 下页面标题不再被返回按钮遮挡。拖入单个 TXT 时保留文件名，较短中文分段选项有空间时保持横排。"
+                        ]
+                    ],
+                    [
+                        "新增",
+                        [
+                            "“显示差异”默认关闭，成功转换后可成对高亮原文与结果，用上一处／下一处导航。原文或配置变化后失效，需重新转换。普通编辑区使用；任一侧超过 50,000 个字形簇、超过 5,000 处差异或计算预算不足时不显示。复制、分享和导出仍是纯文本，不额外消耗转换次数。",
+                            "Mac Pro：文件菜单的“批量转换 TXT 文件…”（⌘⇧O）或拖入两个以上文件，一次最多 100 个 UTF-8 TXT，每个最多 1 GiB。保存为输出文件夹中的新文件，不覆盖原件；重名自动编号，单个失败不阻断其余文件，不计入主页次数。",
+                            "iPhone/iPad 分享菜单新增“简繁转换”，可选预设并记住上次选择，复制、分享或返回到支持接收结果的应用。支持最多 10 MiB 文本，免费且不计入主页次数。"
+                        ]
+                    ],
+                    [
+                        "变更",
+                        [
+                            "转换为简体时可选择 OpenCC、台湾、香港原文标准；台湾和香港来源可选择转换地域用词。已有配置保持 OpenCC 标准。",
+                            "繁体＋香港标准＋香港模式改为香港字形及词组；已有这一组合的转换结果会变化。",
+                            "反馈邮箱更新为 support@gewill.org。"
+                        ]
+                    ]
+                ]
+            },
+            {
                 "id": "version-22",
                 "version": "2.2",
                 "date": "2026 年 11 月 1 日发布",
-                "film": {"src": "openccman-2.2-zh-Hans", "note": "2.2 更新视频 · 21 秒 · 含音乐", "load": "点击后才加载 · 约 2.6 MB", "play": "播放 2.2 更新视频"},
+                "film": {
+                    "src": "openccman-2.2-zh-Hans",
+                    "note": "2.2 更新视频 · 21 秒 · 含音乐",
+                    "load": "点击后才加载 · 约 2.6 MB",
+                    "play": "播放 2.2 更新视频"
+                },
                 "note": "适用于 iOS/iPadOS 15 及以上、macOS 12 及以上。iPhone/iPad 的 100 MiB 文件转换仅限 Pro、单个 UTF-8 TXT，需在应用打开时进行；编辑区导入和拖放仍为 10 MiB。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">查看 2.2 发布说明</a>。",
                 "groups": [
                     [
@@ -437,10 +473,46 @@ CHANGELOG = {
         "intro": "這裡記錄使用者能察覺的變更，以及系統與檔案格式限制。完整工程變更保留在 App 儲存庫。",
         "releases": [
             {
+                "id": "version-23",
+                "version": "2.3",
+                "date": "2026 年 11 月 19 日發布",
+                "note": "iOS/iPadOS 15+、macOS 12+；首頁每日免費 12 次不變。批次轉換僅限 Mac Pro，iPhone/iPad 仍一次處理一個檔案。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.3\">檢視 2.3 發布說明</a>。",
+                "groups": [
+                    [
+                        "修正",
+                        [
+                            "Mac 全域快速鍵恢復原地取代，轉換成功後不開啟主視窗。轉換時 App、輸入、剪貼簿或選取範圍變化會取消貼上；終端機中改為開啟原文與結果。失敗提示預設開啟，成功提示預設關閉，可分別設定。",
+                            "Mac 彈出面板跟隨 App 內文字大小；150% 下頁面標題不再被返回按鈕遮擋。拖入單一 TXT 時保留檔名，較短中文分段選項有空間時保持橫排。"
+                        ]
+                    ],
+                    [
+                        "新增",
+                        [
+                            "「顯示差異」預設關閉，成功轉換後可成對標示原文與結果，以上一處／下一處導覽。原文或設定變更後失效，需重新轉換。適用於一般編輯區；任一側超過 50,000 個字形叢集、超過 5,000 處差異或計算預算不足時不顯示。拷貝、分享與匯出仍為純文字，不額外消耗轉換次數。",
+                            "Mac Pro：檔案選單的「批次轉換 TXT 檔案⋯」（⌘⇧O）或拖入兩個以上檔案，一次最多 100 個 UTF-8 TXT，每個最多 1 GiB。另存為輸出資料夾中的新檔案，不覆寫原件；同名自動編號，單一失敗不會中斷其餘檔案，不計入首頁次數。",
+                            "iPhone/iPad 分享選單新增「簡繁轉換」，可選預設並記住上次選擇，拷貝、分享或傳回支援接收結果的 App。支援最多 10 MiB 文字，免費且不計入首頁次數。"
+                        ]
+                    ],
+                    [
+                        "變更",
+                        [
+                            "轉換為簡體時可選擇 OpenCC、臺灣、香港原文標準；臺灣與香港來源可選擇轉換地區用語。既有設定保持 OpenCC 標準。",
+                            "繁體＋香港標準＋香港模式改為香港字形與詞組；既有這一組合的轉換結果會改變。",
+                            "意見回饋電子郵件更新為 support@gewill.org。"
+                        ]
+                    ]
+                ]
+            },
+            {
                 "id": "version-22",
                 "version": "2.2",
                 "date": "2026 年 11 月 1 日推出",
-                "film": {"src": "openccman-2.2-zh-Hant", "note": "2.2 更新影片 · 21 秒 · 含音樂", "load": "點擊後才載入 · 約 2.6 MB", "play": "播放 2.2 更新影片"},
+                "film": {
+                    "src": "openccman-2.2-zh-Hant",
+                    "note": "2.2 更新影片 · 21 秒 · 含音樂",
+                    "load": "點擊後才載入 · 約 2.6 MB",
+                    "play": "播放 2.2 更新影片"
+                },
                 "note": "適用於 iOS/iPadOS 15 以上、macOS 12 以上。iPhone/iPad 的 100 MiB 檔案轉換僅限 Pro、單一 UTF-8 TXT，需在 App 開啟時進行；編輯區匯入與拖放仍為 10 MiB。<a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">檢視 2.2 發布說明</a>。",
                 "groups": [
                     [
@@ -542,10 +614,46 @@ CHANGELOG = {
         "intro": "Release notes describe changes you can use, along with platform and file-format limits. The full engineering history remains in the app repository.",
         "releases": [
             {
+                "id": "version-23",
+                "version": "2.3",
+                "date": "Published 19 November 2026",
+                "note": "Requires iOS/iPadOS 15+ or macOS 12+. The home workspace still includes 12 free conversions per day. Batch conversion is Mac Pro only; iPhone/iPad still process one file at a time. <a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.3\">Read the 2.3 release notes</a>.",
+                "groups": [
+                    [
+                        "Fixed",
+                        [
+                            "Mac global shortcuts replace an editable selection again without opening the main window. Changes to the app, input, clipboard or selection cancel the paste; terminals open source and result instead. Failure notices are on by default and success notices off, with separate settings.",
+                            "Mac sheets follow in-app text size; page titles remain clear of the back button at 150%. Dropping one TXT file preserves its filename, and short Chinese segmented labels stay horizontal when space permits."
+                        ]
+                    ],
+                    [
+                        "Added",
+                        [
+                            "Show Differences is off by default. After conversion, paired highlights and Previous/Next navigation identify each change. Editing the source or changing settings invalidates them. It serves the ordinary editor; differences are not shown above 50,000 grapheme clusters per side, 5,000 changes or the calculation budget. Copy, share and export stay plain text, and viewing differences uses no extra allowance.",
+                            "Mac Pro: File › Batch Convert TXT Files… (⌘⇧O), or drop two or more files, to convert up to 100 UTF-8 TXT files, each up to 1 GiB. Results go to an output folder without overwriting originals; name clashes are numbered and one failure does not stop the rest. No home-workspace allowance is used.",
+                            "iPhone/iPad: Convert Chinese Text in the Share sheet remembers its selected preset. Copy, share or return the result to apps that accept it. Up to 10 MiB of text, free and without using the daily allowance."
+                        ]
+                    ],
+                    [
+                        "Changed",
+                        [
+                            "When converting to Simplified Chinese, choose OpenCC, Taiwan or Hong Kong as the source standard. Taiwan and Hong Kong sources can also convert regional phrases. Existing settings keep the OpenCC standard.",
+                            "Traditional Chinese with the Hong Kong standard and Hong Kong idioms now uses Hong Kong characters and phrases; saved settings with this combination produce different output.",
+                            "The feedback email is now support@gewill.org."
+                        ]
+                    ]
+                ]
+            },
+            {
                 "id": "version-22",
                 "version": "2.2",
                 "date": "Published 1 November 2026",
-                "film": {"src": "openccman-2.2-en", "note": "What's new in 2.2 · 21 seconds · with music", "load": "Loads only after you press play · about 2.6 MB", "play": "Play the 2.2 video"},
+                "film": {
+                    "src": "openccman-2.2-en",
+                    "note": "What's new in 2.2 · 21 seconds · with music",
+                    "load": "Loads only after you press play · about 2.6 MB",
+                    "play": "Play the 2.2 video"
+                },
                 "note": "Requires iOS/iPadOS 15+ or macOS 12+. The 100 MiB file conversion on iPhone/iPad is Pro only, for one UTF-8 TXT at a time, and runs while the app is open; editor imports and drag and drop remain limited to 10 MiB. <a href=\"https://github.com/gewill/OpenCCman/releases/tag/v2.2\">Read the 2.2 release notes</a>.",
                 "groups": [
                     [
@@ -660,7 +768,7 @@ SUPPORT = {
         ],
         "warning": "请勿发送密码、验证码或包含敏感信息的原文。",
         "description": "联系 OpenCCman 开发者，反馈问题或建议，恢复 Pro 购买，或向 Apple 申请退款。",
-        "email": "531sunlight@gmail.com",
+        "email": "support@gewill.org",
         "refund_url": "https://reportaproblem.apple.com/"
     },
     "zh-Hant": {
@@ -679,7 +787,7 @@ SUPPORT = {
         ],
         "warning": "請勿傳送密碼、驗證碼或包含敏感資訊的原文。",
         "description": "聯絡 OpenCCman 開發者，回報問題或建議、回復 Pro 購買，或向 Apple 申請退款。",
-        "email": "531sunlight@gmail.com",
+        "email": "support@gewill.org",
         "refund_url": "https://reportaproblem.apple.com/"
     },
     "en": {
@@ -698,7 +806,7 @@ SUPPORT = {
         ],
         "warning": "Do not send passwords, verification codes or sensitive source text.",
         "description": "Contact the OpenCCman developer, restore a Pro purchase, or request a refund from Apple.",
-        "email": "531sunlight@gmail.com",
+        "email": "support@gewill.org",
         "refund_url": "https://reportaproblem.apple.com/"
     }
 }
@@ -732,7 +840,7 @@ PRIVACY = {
             ],
             [
                 "联系方式",
-                "隐私问题请联系：531sunlight@gmail.com。"
+                "隐私问题请联系：support@gewill.org。"
             ]
         ],
         "back": "返回首页"
@@ -764,7 +872,7 @@ PRIVACY = {
             ],
             [
                 "聯絡方式",
-                "隱私問題請聯絡：531sunlight@gmail.com。"
+                "隱私問題請聯絡：support@gewill.org。"
             ]
         ],
         "back": "返回首頁"
@@ -796,7 +904,7 @@ PRIVACY = {
             ],
             [
                 "Contact",
-                "Privacy questions: 531sunlight@gmail.com."
+                "Privacy questions: support@gewill.org."
             ]
         ],
         "back": "Back to home"

@@ -22,7 +22,7 @@ LOCALES = {
             "On Mac, set up selection shortcuts when you want to work across apps.",
             "Learn how the upstream OpenCC project powers the app and where its scope differs.",
         ],
-        "scope": "These steps describe the public 2.2 app on iPhone, iPad and Mac. Changes in each version are listed in the changelog.",
+        "scope": "These steps describe the public 2.3 app on iPhone, iPad and Mac. Changes in each version are listed in the changelog.",
         "related": "More guides",
         "back": "All guides",
         "cta_title": "Ready to try it?",
@@ -50,7 +50,7 @@ LOCALES = {
             "需要跨 App 工作时，再设置 Mac 选中文字快捷键。",
             "了解提供转换能力的 OpenCC 原始项目，以及它和 App 的区别。",
         ],
-        "scope": "以下步骤对应已公开的 iPhone、iPad、Mac 2.2 版。各版本的变化见更新记录。",
+        "scope": "以下步骤对应已公开的 iPhone、iPad、Mac 2.3 版。各版本的变化见更新记录。",
         "related": "继续阅读",
         "back": "所有指南",
         "cta_title": "开始转换",
@@ -78,7 +78,7 @@ LOCALES = {
             "需要跨 App 工作時，再設定 Mac 所選文字快捷鍵。",
             "認識提供轉換能力的 OpenCC 原始專案，以及它與 App 的差別。",
         ],
-        "scope": "以下步驟對應已公開的 iPhone、iPad、Mac 2.2 版。各版本的變化見更新紀錄。",
+        "scope": "以下步驟對應已公開的 iPhone、iPad、Mac 2.3 版。各版本的變化見更新紀錄。",
         "related": "繼續閱讀",
         "back": "所有指南",
         "cta_title": "開始轉換",
@@ -104,8 +104,10 @@ ARTICLES = {
 <li><strong>Choose Convert.</strong> The converted text appears in Result. On iPhone the action sits beside the source area; Mac and iPad can show the two panes side by side or stacked.</li>
 <li><strong>Compare before copying.</strong> Review names, specialist terms and sentences where more than one Chinese form is possible. Copy or export only the result you want to use.</li>
 </ol></section>
-<section><h2>What the result means</h2><p>OpenCC converts character forms and dictionary phrases. It does not translate between languages or rewrite a sentence for a different audience. The Simplified preset is not a complete reverse conversion of Taiwan-specific vocabulary. If you change the preset after converting, run Convert again to produce a result using the new choice.</p><p>Free use includes 12 conversions from the home workspace each day. A conversion that fails or is canceled does not use an allowance; Pro has no home-workspace limit.</p></section>
+<section><h2>What the result means</h2><p>OpenCC converts character forms and dictionary phrases. It does not translate between languages or rewrite a sentence for a different audience. The Simplified preset uses the OpenCC standard. In conversion settings, choose Taiwan or Hong Kong as the source standard and enable regional phrases when you want their dictionary terms converted as well. If you change the preset after converting, run Convert again to produce a result using the new choice.</p><p>Free use includes 12 conversions from the home workspace each day. A conversion that fails or is canceled does not use an allowance; Pro has no home-workspace limit.</p></section>
 <aside class="guide-note"><strong>Working with a document?</strong> Import one UTF-8 TXT file instead of pasting a long draft. See the <a href="convert-txt.html">TXT guide</a> for file limits and export behavior.</aside>
+
+<section><h2>Review differences and share text</h2><p>After converting, turn on Show Differences and use Previous/Next to visit each paired change. It is off by default; editing the source or changing settings requires a new conversion. Oversized documents skip the diff, and copied or exported text contains no markup.</p><p>On iPhone and iPad, select text in another app and use its Share sheet → Convert Chinese Text. Choose a preset, then copy or share the result. This free action accepts up to 10 MiB and does not use the daily allowance.</p></section>
 """,
         },
         "zh-Hans": {
@@ -121,8 +123,10 @@ ARTICLES = {
 <li><strong>点击“转换”。</strong>转换后在“结果”区域查看。iPhone 的操作按钮靠近原文区域；Mac 和 iPad 可将原文与结果左右或上下排列。</li>
 <li><strong>对照后再使用。</strong>检查人名、品牌、专业术语，以及可能有多种写法的句子；确认后再复制或导出结果。</li>
 </ol></section>
-<section><h2>结果能做什么</h2><p>OpenCC 转换字形和词典中的词组，不负责语言翻译，也不会自动把整句话改写为另一地区的表达。“简体”预设并非台湾词汇的完整反向转换。转换后若切换预设，需要再次点击“转换”，才会得到新配置下的结果。</p><p>免费版每天可在主页转换 12 次。失败或取消的转换不计次；Pro 不受主页次数限制。</p></section>
+<section><h2>结果能做什么</h2><p>OpenCC 转换字形和词典中的词组，不负责语言翻译，也不会自动把整句话改写为另一地区的表达。“简体”预设使用 OpenCC 标准；若需转换台湾或香港词组，可在转换设置中选择相应原文标准并开启地域用词。转换后若切换预设，需要再次点击“转换”，才会得到新配置下的结果。</p><p>免费版每天可在主页转换 12 次。失败或取消的转换不计次；Pro 不受主页次数限制。</p></section>
 <aside class="guide-note"><strong>要处理文稿？</strong>可以导入单个 UTF-8 TXT 文件，不必把长文全部粘贴进来。文件容量和导出方式见 <a href="convert-txt.html">TXT 指南</a>。</aside>
+
+<section><h2>查看差异与分享文字</h2><p>转换后打开“显示差异”，用上一处／下一处定位成对变化。默认关闭；编辑原文或更改配置后需重新转换。过大文稿不显示差异，复制与导出不会带上标记。</p><p>iPhone 和 iPad 可从其他应用的分享菜单选择“简繁转换”，选预设后复制或分享结果。此入口免费、支持最多 10 MiB 文本，不计入主页次数。</p></section>
 """,
         },
         "zh-Hant": {
@@ -138,8 +142,10 @@ ARTICLES = {
 <li><strong>點選「轉換」。</strong>轉換後在「結果」區域查看。iPhone 的操作按鈕靠近原文區域；Mac 和 iPad 可將原文與結果左右或上下排列。</li>
 <li><strong>對照後再使用。</strong>檢查人名、品牌、專業術語，以及可能有多種寫法的句子；確認後再複製或匯出結果。</li>
 </ol></section>
-<section><h2>結果能做什麼</h2><p>OpenCC 轉換字形及詞典中的詞組，不負責語言翻譯，也不會自動把整句話改寫成另一地區的表達。「簡體」預設並非臺灣詞彙的完整反向轉換。轉換後若切換預設，須再次點選「轉換」，才會得到新設定下的結果。</p><p>免費版每天可在首頁轉換 12 次。失敗或取消的轉換不計次；Pro 不受首頁次數限制。</p></section>
+<section><h2>結果能做什麼</h2><p>OpenCC 轉換字形及詞典中的詞組，不負責語言翻譯，也不會自動把整句話改寫成另一地區的表達。「簡體」預設使用 OpenCC 標準；若需轉換臺灣或香港詞組，可在轉換設定中選擇相應原文標準並開啟地區用語。轉換後若切換預設，須再次點選「轉換」，才會得到新設定下的結果。</p><p>免費版每天可在首頁轉換 12 次。失敗或取消的轉換不計次；Pro 不受首頁次數限制。</p></section>
 <aside class="guide-note"><strong>要處理文件？</strong>可以匯入單個 UTF-8 TXT 檔案，不必把長文全部貼進來。檔案容量與匯出方式見 <a href="convert-txt.html">TXT 指南</a>。</aside>
+
+<section><h2>查看差異與分享文字</h2><p>轉換後開啟「顯示差異」，以上一處／下一處定位成對變化。預設關閉；編輯原文或變更設定後需重新轉換。過大文稿不顯示差異，拷貝與匯出不會帶上標記。</p><p>iPhone 與 iPad 可從其他 App 的分享選單選擇「簡繁轉換」，選預設後拷貝或分享結果。此入口免費、支援最多 10 MiB 文字，不計入首頁次數。</p></section>
 """,
         },
     },
@@ -207,7 +213,7 @@ ARTICLES = {
 <section><h2>Before importing</h2><p>Save the document as plain-text <code>.txt</code> in UTF-8. A UTF-8 byte-order mark (BOM) is accepted. The app does not guess Big5, GBK or another encoding. If the file exceeds 10 MiB, use the Pro large-file conversion below, or reduce or split it first.</p></section>
 <section><h2>Import, convert, export</h2><ol class="guide-steps"><li><strong>Import one file.</strong> Choose Import TXT in the workspace, or drop a single TXT file onto it. A successful import replaces the source text.</li><li><strong>Choose a preset and convert.</strong> Read the source and result together; a new file is not saved automatically.</li><li><strong>Choose Export TXT.</strong> The app exports the latest successful result as UTF-8 without a BOM. For example, <code>essay.txt</code> suggests <code>essay-converted.txt</code>; choose the save location in the system panel.</li></ol></section>
 <section><h2>If something goes wrong</h2><p>An oversized or invalidly encoded import keeps the previous draft. A failed or canceled conversion does not replace the last successful result. The file flow preserves line endings, blank lines, Emoji, combining characters and embedded U+0000; still inspect the converted words before sharing the document.</p></section>
-<section><h2>Larger files with Pro</h2><p>With Pro, choose Import TXT and pick one UTF-8 TXT file larger than 10 MiB. On Mac it can be up to 1 GiB; on iPhone and iPad, up to 100 MiB. The file is converted directly to a new file and you choose where to save it. Its text does not enter the editor, so the current draft and result stay in place, and homepage conversions are not used. The task shows progress and can be canceled.</p><p>On iPhone and iPad, keep the app open while it converts: moving to the background or locking the device stops the task safely. A finished result is kept until you save or delete it, even after an app restart. Drag and drop on iPhone and iPad stays limited to 10 MiB. Batch conversion is not supported.</p></section>
+<section><h2>Larger files with Pro</h2><p>With Pro, choose Import TXT and pick one UTF-8 TXT file larger than 10 MiB. On Mac it can be up to 1 GiB; on iPhone and iPad, up to 100 MiB. The file is converted directly to a new file and you choose where to save it. Its text does not enter the editor, so the current draft and result stay in place, and homepage conversions are not used. The task shows progress and can be canceled.</p><p>On iPhone and iPad, keep the app open while it converts: moving to the background or locking the device stops the task safely. A finished result is kept until you save or delete it, even after an app restart. Drag and drop on iPhone and iPad stays limited to 10 MiB. Batch conversion is available on Mac with Pro: choose File › Batch Convert TXT Files… (⌘⇧O), or drop two or more files. Select up to 100 UTF-8 TXT files, each up to 1 GiB, then an output folder. Originals stay unchanged, clashing names are numbered, and individual failures do not stop the rest. It does not use the daily allowance. iPhone and iPad still convert one file at a time.</p></section>
 """,
         },
         "zh-Hans": {
@@ -220,7 +226,7 @@ ARTICLES = {
 <section><h2>导入前先检查</h2><p>把文稿存为 UTF-8 编码的纯文本 <code>.txt</code>。可以带 UTF-8 BOM。应用不会猜测 Big5、GBK 等其他编码。如果文件超过 10 MiB，可使用下文的 Pro 大文件转换，或先缩小、拆分。</p></section>
 <section><h2>导入、转换、导出</h2><ol class="guide-steps"><li><strong>导入一个文件。</strong>在工作区选择“导入 TXT”，或把单个 TXT 文件拖入工作区。导入成功后会替换原文。</li><li><strong>选择预设并转换。</strong>对照原文和结果；转换完成不会自动保存新文件。</li><li><strong>选择“导出 TXT”。</strong>应用把最近一次成功结果存为不带 BOM 的 UTF-8。例如导入 <code>essay.txt</code> 时，建议文件名是 <code>essay-converted.txt</code>；保存位置由系统面板选择。</li></ol></section>
 <section><h2>遇到错误时</h2><p>文件过大或编码无效时，原有文稿不会被覆盖。转换失败或取消也不会替换最近一次成功结果。文件流程保留换行、空行、Emoji、组合字符和 U+0000；分享前仍应校对转换后的用词。</p></section>
-<section><h2>用 Pro 转换文件</h2><p>开通 Pro 后，选择“导入 TXT”并选取单个大于 10 MiB 的 UTF-8 TXT 文件：Mac 上最大 1 GiB，iPhone 和 iPad 上最大 100 MiB。文件会直接转换成新文件，保存位置由你选择。正文不进入编辑区，当前原文和结果保持不变，也不计入主页次数。任务会显示进度，并可随时取消。</p><p>在 iPhone 和 iPad 上转换时请保持应用打开：切到后台或锁屏会安全中止任务。已完成的结果在保存或删除前一直保留，重启应用也不会丢失。iPhone 和 iPad 上的拖放仍以 10 MiB 为上限。不支持批量转换。</p></section>
+<section><h2>用 Pro 转换文件</h2><p>开通 Pro 后，选择“导入 TXT”并选取单个大于 10 MiB 的 UTF-8 TXT 文件：Mac 上最大 1 GiB，iPhone 和 iPad 上最大 100 MiB。文件会直接转换成新文件，保存位置由你选择。正文不进入编辑区，当前原文和结果保持不变，也不计入主页次数。任务会显示进度，并可随时取消。</p><p>在 iPhone 和 iPad 上转换时请保持应用打开：切到后台或锁屏会安全中止任务。已完成的结果在保存或删除前一直保留，重启应用也不会丢失。iPhone 和 iPad 上的拖放仍以 10 MiB 为上限。Mac Pro 支持批量转换：选择“文件 → 批量转换 TXT 文件…”（⌘⇧O）或拖入两个以上文件，一次最多 100 个 UTF-8 TXT，每个最多 1 GiB，再选择输出文件夹。原件不变，重名自动编号，单个失败不阻断其余文件，不计入主页次数。iPhone 和 iPad 仍一次处理一个文件。</p></section>
 """,
         },
         "zh-Hant": {
@@ -233,7 +239,7 @@ ARTICLES = {
 <section><h2>匯入前先檢查</h2><p>把文件儲存為 UTF-8 編碼的純文字 <code>.txt</code>。可以包含 UTF-8 BOM。App 不會猜測 Big5、GBK 等其他編碼。若檔案超過 10 MiB，可使用下文的 Pro 大檔案轉換，或先縮小、拆分。</p></section>
 <section><h2>匯入、轉換、匯出</h2><ol class="guide-steps"><li><strong>匯入一個檔案。</strong>在工作區選擇「匯入 TXT」，或把單個 TXT 檔案拖入工作區。匯入成功後會取代原文。</li><li><strong>選擇預設並轉換。</strong>對照原文與結果；轉換完成不會自動儲存新檔案。</li><li><strong>選擇「匯出 TXT」。</strong>App 把最近一次成功結果存成不帶 BOM 的 UTF-8。例如匯入 <code>essay.txt</code> 時，建議檔名為 <code>essay-converted.txt</code>；儲存位置由系統面板選擇。</li></ol></section>
 <section><h2>遇到錯誤時</h2><p>檔案過大或編碼無效時，原有文件不會被覆蓋。轉換失敗或取消也不會取代最近一次成功結果。檔案流程保留換行、空行、Emoji、組合字元與 U+0000；分享前仍應校對轉換後的用詞。</p></section>
-<section><h2>用 Pro 轉換文件</h2><p>開通 Pro 後，選擇「匯入 TXT」並選取單一大於 10 MiB 的 UTF-8 TXT 檔案：Mac 上最多 1 GiB，iPhone 與 iPad 上最多 100 MiB。檔案會直接轉換成新檔案，儲存位置由你選擇。正文不進入編輯區，目前的原文與結果保持不變，也不計入首頁次數。工作會顯示進度，並可隨時取消。</p><p>在 iPhone 與 iPad 上轉換時請保持 App 開啟：切到背景或鎖定螢幕會安全中止工作。已完成的結果在儲存或刪除前一直保留，重新啟動 App 也不會遺失。iPhone 與 iPad 上的拖放仍以 10 MiB 為上限。不支援批次轉換。</p></section>
+<section><h2>用 Pro 轉換文件</h2><p>開通 Pro 後，選擇「匯入 TXT」並選取單一大於 10 MiB 的 UTF-8 TXT 檔案：Mac 上最多 1 GiB，iPhone 與 iPad 上最多 100 MiB。檔案會直接轉換成新檔案，儲存位置由你選擇。正文不進入編輯區，目前的原文與結果保持不變，也不計入首頁次數。工作會顯示進度，並可隨時取消。</p><p>在 iPhone 與 iPad 上轉換時請保持 App 開啟：切到背景或鎖定螢幕會安全中止工作。已完成的結果在儲存或刪除前一直保留，重新啟動 App 也不會遺失。iPhone 與 iPad 上的拖放仍以 10 MiB 為上限。Mac Pro 支援批次轉換：選擇「檔案 → 批次轉換 TXT 檔案⋯」（⌘⇧O）或拖入兩個以上檔案，一次最多 100 個 UTF-8 TXT，每個最多 1 GiB，再選擇輸出資料夾。原件不變，同名自動編號，單一失敗不會中斷其餘檔案，不計入首頁次數。iPhone 與 iPad 仍一次處理一個檔案。</p></section>
 """,
         },
     },
@@ -245,7 +251,7 @@ ARTICLES = {
             "summary": "Configure a shortcut, grant Accessibility access, and choose between replacement and opening the selection in OpenCCman.",
             "lede": "The Mac app can work with selected text in another app. Use the open action when you want to inspect the result before changing the original document.",
             "body": """
-<section><h2>Set up the shortcuts</h2><ol class="guide-steps"><li><strong>Open Settings → Global Shortcut.</strong> Grant Accessibility permission when prompted, then return to the app and choose Refresh to confirm the status.</li><li><strong>Enable and record the keys.</strong> Turn on the global shortcut switch. Record separate key combinations for Convert Selected Text and Open Selected Text; change them if they conflict with another app.</li><li><strong>Select text in the source app.</strong> Put focus in the document, select the Chinese text, then use your chosen shortcut. The Open action brings the selection into OpenCCman for review. The Convert action attempts to replace an editable selection and also shows the result in OpenCCman.</li></ol></section>
+<section><h2>Set up the shortcuts</h2><ol class="guide-steps"><li><strong>Open Settings → Global Shortcut.</strong> Grant Accessibility permission when prompted, then return to the app and choose Refresh to confirm the status.</li><li><strong>Enable and record the keys.</strong> Turn on the global shortcut switch. Record separate key combinations for Convert Selected Text and Open Selected Text; change them if they conflict with another app.</li><li><strong>Select text in the source app.</strong> Put focus in the document, select the Chinese text, then use your chosen shortcut. The Open action brings the selection into OpenCCman for review. In 2.3, Convert pastes back into an editable selection without opening the main window. Changes to the source app, input, clipboard or selection cancel the paste. Terminals open source and result instead. Failure notices are on by default, success notices off; both can be changed in Settings. On macOS 27 the permission is called Device Control and Data Access.</li></ol></section>
 <section><h2>When replacement does not happen</h2><p>Automatic replacement depends on Accessibility permission and the source app's selection and editing support. If the selection or destination cannot be confirmed safely, use the result in OpenCCman and paste it yourself. The original app may also reserve the same key combination, so try another recording if the shortcut never fires.</p><p>macOS Services provide another route: select text, open the source app's Services menu, then choose an OpenCCman conversion or open action if that app exposes Services. The open action is a good choice for read-only fields.</p></section>
 <aside class="guide-note">Global shortcuts and Services are Mac features. On iPhone or iPad, use the <a href="convert-chinese.html">in-app conversion workflow</a>.</aside>
 """,
@@ -257,7 +263,7 @@ ARTICLES = {
             "summary": "配置快捷键和辅助功能权限，在自动替换与打开 App 校对之间选择。",
             "lede": "Mac 版可以处理其他 App 中选中的文字。若想先检查结果再修改原稿，可用“打开选中文字”操作。",
             "body": """
-<section><h2>设置快捷键</h2><ol class="guide-steps"><li><strong>打开“设置 → 全局快捷键”。</strong>按提示授予辅助功能权限，回到 App 后点击“刷新”，确认权限状态。</li><li><strong>开启并录入组合键。</strong>打开全局快捷键开关，分别在“转换选中文本快捷键”和“打开选中文本快捷键”录入组合键；若与别的 App 冲突，可改用其他组合。</li><li><strong>在来源 App 选中文字。</strong>让文稿获得焦点，选中中文后按快捷键。“打开”会带着原文进入 OpenCCman，供你校对；“转换”会尝试替换可编辑的选区，也会在 OpenCCman 显示结果。</li></ol></section>
+<section><h2>设置快捷键</h2><ol class="guide-steps"><li><strong>打开“设置 → 全局快捷键”。</strong>按提示授予辅助功能权限，回到 App 后点击“刷新”，确认权限状态。</li><li><strong>开启并录入组合键。</strong>打开全局快捷键开关，分别在“转换选中文本快捷键”和“打开选中文本快捷键”录入组合键；若与别的 App 冲突，可改用其他组合。</li><li><strong>在来源 App 选中文字。</strong>让文稿获得焦点，选中中文后按快捷键。“打开”会带着原文进入 OpenCCman，供你校对；2.3 的“转换”会贴回可编辑选区，成功后不打开主窗口；转换期间应用、输入、剪贴板或选区变化会取消粘贴。终端中改为打开原文和结果。失败提示默认开、成功提示默认关，可在设置中更改。macOS 27 将所需权限称为“设备控制和数据访问”。</li></ol></section>
 <section><h2>未能自动替换怎么办</h2><p>自动替换取决于辅助功能权限，以及来源 App 是否支持读取和编辑选区。如果无法安全确认选区或目标，可以在 OpenCCman 查看结果，再手动复制粘贴。若快捷键完全没有反应，也要检查组合键是否被其他 App 占用。</p><p>还可以试 macOS 系统服务：选中文字后，在来源 App 的“服务”菜单中选择 OpenCCman 的转换或打开操作，前提是该 App 提供相关服务入口。只读区域更适合使用“打开”操作。</p></section>
 <aside class="guide-note">全局快捷键和系统服务是 Mac 功能。在 iPhone 或 iPad 上，请使用<a href="convert-chinese.html">应用内转换流程</a>。</aside>
 """,
@@ -269,7 +275,7 @@ ARTICLES = {
             "summary": "設定快捷鍵及輔助使用權限，在自動取代與開啟 App 校對之間選擇。",
             "lede": "Mac 版可以處理其他 App 中選取的文字。若想先檢查結果再修改原稿，可使用「開啟所選文字」操作。",
             "body": """
-<section><h2>設定快捷鍵</h2><ol class="guide-steps"><li><strong>開啟「設定 → 全域快速鍵」。</strong>依提示授予輔助使用權限，回到 App 後點選「重新整理」，確認權限狀態。</li><li><strong>啟用並錄入組合鍵。</strong>開啟全域快速鍵開關，分別在「轉換選中文本快速鍵」與「打開選中文本快速鍵」錄入組合鍵；若與其他 App 衝突，可改用其他組合。</li><li><strong>在來源 App 選取文字。</strong>讓文件取得焦點，選取中文後按快捷鍵。「開啟」會把原文帶進 OpenCCman 供你校對；「轉換」會嘗試取代可編輯的選區，也會在 OpenCCman 顯示結果。</li></ol></section>
+<section><h2>設定快捷鍵</h2><ol class="guide-steps"><li><strong>開啟「設定 → 全域快速鍵」。</strong>依提示授予輔助使用權限，回到 App 後點選「重新整理」，確認權限狀態。</li><li><strong>啟用並錄入組合鍵。</strong>開啟全域快速鍵開關，分別在「轉換選中文本快速鍵」與「打開選中文本快速鍵」錄入組合鍵；若與其他 App 衝突，可改用其他組合。</li><li><strong>在來源 App 選取文字。</strong>讓文件取得焦點，選取中文後按快捷鍵。「開啟」會把原文帶進 OpenCCman 供你校對；2.3 的「轉換」會貼回可編輯選區，成功後不開啟主視窗；轉換期間 App、輸入、剪貼簿或選取範圍變化會取消貼上。終端機中改為開啟原文與結果。失敗提示預設開啟、成功提示預設關閉，可在設定中變更。macOS 27 將所需權限稱為「裝置控制和資料取用」。</li></ol></section>
 <section><h2>未能自動取代怎麼辦</h2><p>自動取代取決於輔助使用權限，以及來源 App 是否支援讀取與編輯選區。若無法安全確認選區或目標，可以在 OpenCCman 查看結果，再手動複製貼上。若快捷鍵完全沒有反應，也要檢查組合鍵是否被其他 App 佔用。</p><p>也可試 macOS 系統服務：選取文字後，在來源 App 的「服務」選單中選擇 OpenCCman 的轉換或開啟操作，前提是該 App 提供相關服務入口。唯讀區域較適合使用「開啟」操作。</p></section>
 <aside class="guide-note">全域快捷鍵與系統服務是 Mac 功能。在 iPhone 或 iPad 上，請使用<a href="convert-chinese.html">App 內轉換流程</a>。</aside>
 """,
