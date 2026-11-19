@@ -25,6 +25,24 @@ class Links(HTMLParser):
    assert path.exists(),f'Missing asset in {self.path}: {value}'
 
 
+def check_legacy_redirects():
+ rules = {}
+ for raw in Path('site/_redirects').read_text().splitlines():
+  line = raw.partition('#')[0].strip()
+  if not line: continue
+  source, target, status = line.split()
+  assert source not in rules, f'Duplicate redirect: {source}'
+  rules[source] = (target, status)
+ for lang in ('zh-Hans', 'zh-Hant'):
+  source = '/' + lang.replace('-', '_') + '/*'
+  target, status = rules[source]
+  assert (target, status) == (f'/{lang}/:splat', '301'), source
+  for page in ('support.html', 'privacy.html'):
+   destination = Path('site') / target.lstrip('/').replace(':splat', page)
+   assert destination.is_file(), f'Missing redirect destination: {destination}'
+
+
+check_legacy_redirects()
 check_build(check=True)
 check_specimens(check=True)
 needed=json.loads(Path('scripts/font_glyphs.json').read_text())
